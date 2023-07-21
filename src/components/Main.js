@@ -3,6 +3,8 @@ import Copy from '../svg/CopySVG'
 import Plus from '../svg/PlusSVG'
 import Graph from './Graph'
 
+import ProgressBar from 'react-bootstrap/ProgressBar';
+
 import { Progress } from 'flowbite-react';
 
 import { ReactComponent as Weth } from './weth.svg';
@@ -73,7 +75,7 @@ export default function Main() {
           <Graph/>
         </div>
         <div style={{backgroundColor:'#F7F9FB', width:'50%', borderRadius: 5, padding:12, position: 'relative'}}>
-          <div style={{display:'flex', width:'100%', alignItems:'center'}}>
+          {/* <div style={{display:'flex', width:'100%', alignItems:'center'}}>
             <h3>Asset Allocation</h3>
             <div style={{display:'flex', right: 20, position:'absolute'}}>
               <button style={{borderTopLeftRadius: '4px', borderBottomLeftRadius: '4px', borderRight: 'none',cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', border: '1px solid var(--text-secondary, rgba(0, 26, 76, 0.60))', backgroundColor:'transparent'}}>
@@ -83,7 +85,7 @@ export default function Main() {
                 <img height='12' src="https://cdn.iconscout.com/icon/free/png-256/free-circle-dashed-3601581-3003151.png" alt="" />
               </button>
             </div>
-          </div>
+          </div> */}
           
           <div style={{display:'flex'}}>
             <div>
