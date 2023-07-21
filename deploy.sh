@@ -1,1 +1,0 @@
-forge create --rpc-url https://ethereum-goerli.publicnode.com --private-key a7ccd49029f34405de803b2be203427505b05c31f1028176564c954b599afe1b ../contracts/TestHook.sol:TestHook --etherscan-api-key EEM985ISVX7PS45BHVNW87TQ9APZK7AFXB  --verify

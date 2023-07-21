@@ -1,6 +1,6 @@
-import "safe-core-protocol/contracts/interfaces/Integrations.sol";
-import "safe-core-protocol/contracts/interfaces/Accounts.sol";
-import "safe-core-protocol/contracts/DataTypes.sol";
+import "safe-core-protocol/interfaces/Integrations.sol";
+import "safe-core-protocol/interfaces/Accounts.sol";
+import "safe-core-protocol/DataTypes.sol";
 
 contract TestHook is ISafeProtocolHooks {
 
