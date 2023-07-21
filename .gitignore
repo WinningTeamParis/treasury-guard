@@ -25,4 +25,5 @@ yarn-error.log*
 artifacts/**
 scripts/lib/**
 scripts/out/**
+scripts/cache/**
 cache/**
