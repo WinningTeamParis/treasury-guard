@@ -7,6 +7,7 @@ export default function Navbar() {
             <img style={{height: 20}} src="https://dynamic-web.fr/wp-content/uploads/2020/03/logo-nike.png" alt="" />
             <p style={{marginLeft: 10}}>Treasury Guard</p>
         </div>
+        
 
         <input style={{height: '80%'}} type="text" name="" id="" />
 
