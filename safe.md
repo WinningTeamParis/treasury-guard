@@ -25,3 +25,8 @@ Deploy hook
 Call it onto the SafeModuleManager using setHooks using its module manager address.
 
 Only one hook per safe possible atm, but we could generate an aggregate hook which in turn calls other hook contracts.
+
+Other links:
+
+https://safe-global.notion.site/Safe-Hackathon-Success-Guide-26ccbd7263ab44808d8f00106f35c2d7
+https://github.com/5afe/safe-core-protocol-demo/blob/main/contracts/contracts/Plugins.sol#L70
