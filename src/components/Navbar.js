@@ -8,17 +8,14 @@ import Notification from '../svg/NotificationSVG'
 
 export default function Navbar() {
   return (
-    <div style={{width: '70%', padding: '10px 24px', minHeight:'50px', height: '5%', borderBottom: '1px solid var(--black-10, rgba(28, 28, 28, 0.10))'}}>
-        <div style={{display: 'flex', alignItems: 'center', position:'relative'}}>
+    <div style={{width: '70%', alignItems:'center', padding: '24px 24px', minHeight:'50px', height: '10%', borderBottom: '1px solid var(--black-10, rgba(28, 28, 28, 0.10))'}}>
+        <div style={{display: 'flex', alignItems: 'center', marginBottom: 25, position:'relative'}}>
             <div style={{display: 'flex', alignItems: 'center'}}>
-                {/* <img style={{height: 20}} src="https://dynamic-web.fr/wp-content/uploads/2020/03/logo-nike.png" alt="" /> */}
                 <Logo/>
                 <p className="tguard" style={{marginLeft: 10}}>Treasury Guard</p>
             </div>
             
-            <div style={{right: 0, position: 'absolute', alignItems:'center', display:'flex'}}>
-                    {/* <input style={{height: '28px', border: '1px solid rgba(92, 109, 141, 1)'}} placeholder="Search" type="text" name="" id="" /> */}
-
+            <div style={{right: 0, position: 'absolute', alignItems:'center', gap: 5, display:'flex'}}>
                 <label>
                     <input placeholder="Search" style={{borderRadius: '4px', display: 'flex', gap:5, justifyContent: 'center', alignItems: 'center', backgroundColor:'transparent'}}>
                     </input>
