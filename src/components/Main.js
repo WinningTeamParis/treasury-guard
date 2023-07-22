@@ -4,6 +4,10 @@ import Plus from '../svg/PlusSVG'
 import Graph from './Graph'
 
 import sortA from './shape.png'
+import './Main.css'
+import ethLogo from './eth.svg'
+
+import wCon from './WalletConnect.svg'
 
 
 import Table from '@mui/material/Table';
@@ -38,9 +42,9 @@ export default function Main() {
 
       <div style={{marginTop: 30, position:'relative', display: 'flex'}}>
           <div style={{}}>
-            <h1 className='text-md font-bold mb-4'>Chest Address</h1>
+            <h1 className='text-sm font-bold mb-4'>Chest Address</h1>
             <div style={{display:'flex'}}>
-              <h2 className='text-xl font-bold'>0x987...7621</h2>
+              <h2 className='text-xl font-bold' style={{margin:0}}>0x987...7621</h2>
               <button style={{marginLeft: 10, border: 'none', backgroundColor: 'transparent', cursor: 'pointer'}}>
                   <Copy className="address" />
               </button>
@@ -48,15 +52,16 @@ export default function Main() {
           </div>
           <div style={{position:'absolute', right: 20, bottom: 20}}>
             <div style={{display: 'flex', gap: 20}}>
-              <button onClick={() => setOpenModal(!openModal)} style={{borderRadius: '4px', cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', border: '1px solid var(--text-secondary, rgba(0, 26, 76, 0.60))', backgroundColor:'transparent'}}>
-                  <Plus/>
-                  Wallet Connect
+              <button onClick={() => setOpenModal(!openModal)} className="wconn" style={{borderRadius: '4px', cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', border: '1px solid var(--text-secondary, rgba(0, 26, 76, 0.60))'}}>
+                  {/* <Plus/> */}
+                  <img src={wCon} alt="" />
+                  WalletConnect
               </button>
 
-              <button style={{borderRadius: '4px', cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', border: '1px solid var(--text-secondary, rgba(0, 26, 76, 0.60))', backgroundColor:'transparent'}}>
+              <button className="wconn" style={{borderRadius: '4px', cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', border: '1px solid var(--text-secondary, rgba(0, 26, 76, 0.60))'}}>
                   Deposit
               </button>
-              <button style={{borderRadius: '4px', cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', border: '1px solid var(--text-secondary, rgba(0, 26, 76, 0.60))', backgroundColor:'transparent'}}>
+              <button className="wconn" style={{borderRadius: '4px', cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', border: '1px solid var(--text-secondary, rgba(0, 26, 76, 0.60))'}}>
                   Withdraw
               </button>
             </div>
@@ -109,16 +114,16 @@ export default function Main() {
               <div>
                 <div style={{display:'flex', alignItems:'center', gap: 5,  height: '10px'}}>
                   <Weth/>
-                  <h5>wETH</h5>
-                  <h5 style={{color:'gray', fontSize: '12px'}}>Wrapped ETH</h5>
+                  <h5 style={{margin:0}}>wETH</h5>
+                  <h5 style={{color:'gray', margin:0, fontSize: '12px'}}>Wrapped ETH</h5>
                   <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 ml-5" style={{width:'40%'}}>
                     <div className="bg-blue-600 h-2.5 rounded-full" style={{width: '70%'}}></div>
                   </div>
-                  <h3 style={{right:20, position:'absolute'}}>70%</h3>
+                  <h3 style={{right:20,margin:0, position:'absolute'}}>70%</h3>
                 </div>
                 <div style={{display:'flex', alignItems:'center', width:'100%'}}>
-                  <h2 className='font-bold text-md mt-5'>154.28800 wETH</h2>
-                  <h2 className='text-md mt-5' style={{position:'absolute', right:20, color:'#76808F'}}>$152,000</h2>
+                  <h2 className='font-bold text-sm mt-5'>154.28800 wETH</h2>
+                  <h2 className='text-sm mt-5' style={{position:'absolute', right:20, color:'#76808F'}}>$152,000</h2>
                 </div>
               </div>
             </button>
@@ -126,17 +131,18 @@ export default function Main() {
             <button style={{width:'100%', textAlign:'left', height:'40%', alignItems:'center', borderBottom: '1px solid grey'}}>
               <div>
                 <div style={{display:'flex', alignItems:'center', gap: 5,  height: '10px'}}>
-                  <Weth/>
-                  <h5>wETH</h5>
-                  <h5 style={{color:'gray', fontSize: '12px'}}>Wrapped ETH</h5>
+                  {/* <Weth/> */}
+                  <img src={ethLogo} alt="" />
+                  <h5 style={{margin:0}}>ETH</h5>
+                  <h5 style={{color:'gray',margin:0, fontSize: '12px'}}>Ethereum</h5>
                   <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 ml-5" style={{width:'40%'}}>
                     <div className="bg-blue-600 h-2.5 rounded-full" style={{width: '70%'}}></div>
                   </div>
-                  <h3 style={{right:20, position:'absolute'}}>70%</h3>
+                  <h3 style={{right:20, margin:0, position:'absolute'}}>70%</h3>
                 </div>
                 <div style={{display:'flex', alignItems:'center', width:'100%'}}>
-                  <h2 className='font-bold text-md mt-5'>154.28800 wETH</h2>
-                  <h2 className='text-md mt-5' style={{position:'absolute', right:20, color:'#76808F'}}>$152,000</h2>
+                  <h2 className='font-bold text-sm mt-5'>51.11100  ETH</h2>
+                  <h2 className='text-sm mt-5' style={{position:'absolute', right:20, color:'#76808F'}}>$152,000</h2>
                 </div>
               </div>
             </button>
@@ -145,16 +151,16 @@ export default function Main() {
               <div>
                 <div style={{display:'flex', alignItems:'center', gap: 5,  height: '10px'}}>
                   <Weth/>
-                  <h5>wETH</h5>
-                  <h5 style={{color:'gray', fontSize: '12px'}}>Wrapped ETH</h5>
+                  <h5 style={{margin:0}}>wETH</h5>
+                  <h5 style={{color:'gray', margin:0, fontSize: '12px'}}>Wrapped ETH</h5>
                   <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 ml-5" style={{width:'40%'}}>
                     <div className="bg-red-600 h-2.5 rounded-full" style={{width: '30%'}}></div>
                   </div>
-                  <h3 style={{right:20, position:'absolute'}}>30%</h3>
+                  <h3 style={{right:20, margin:0, position:'absolute'}}>30%</h3>
                 </div>
                 <div style={{display:'flex', alignItems:'center', width:'100%'}}>
-                  <h2 className='font-bold text-md mt-5'>154.28800 wETH</h2>
-                  <h2 className='text-md mt-5' style={{position:'absolute', right:20, color:'#76808F'}}>$152,000</h2>
+                  <h2 className='font-bold text-sm mt-5'>154.28800 wETH</h2>
+                  <h2 className='text-sm mt-5' style={{position:'absolute', right:20, color:'#76808F'}}>$152,000</h2>
                 </div>
               </div>
             </button>

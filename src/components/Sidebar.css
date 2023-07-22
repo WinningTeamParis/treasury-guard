@@ -15,7 +15,7 @@
 
     /* Caption Light */
     font-family: Rubik;
-    font-size: 12px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 16px; /* 133.333% */
@@ -23,12 +23,12 @@
 
 .userName{
     color: var(--text-primary, #001A4C);
-font-feature-settings: 'clig' off, 'liga' off;
+    font-feature-settings: 'clig' off, 'liga' off;
 
-/* Caption Heavy */
-font-family: Rubik;
-font-size: 12px;
-font-style: normal;
-font-weight: 600;
-line-height: 16px; /* 133.333% */
+    /* Caption Heavy */
+    font-family: Rubik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 133.333% */
 }

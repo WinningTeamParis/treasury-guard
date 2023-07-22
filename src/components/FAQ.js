@@ -18,10 +18,10 @@ export default function FAQ() {
 
   return (
     <div>
-        <Link to="/">
+        <Link to="/home">
             <div style={{justifyContent:'center', alignItems:'center', display:'flex', margin: 20}}>
                 <img style={{height:30}} src={logoPNG} alt="" />
-                <h1>TreasuryGuard</h1>
+                <h1 className='text-xl text-black' style={{margin:0}}>TreasuryGuard</h1>
             </div>
         </Link>
         <div style={{justifyContent:'center', alignItems:'center', display:'flex', margin: 20}}>

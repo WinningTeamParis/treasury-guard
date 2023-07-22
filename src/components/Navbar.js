@@ -16,7 +16,7 @@ export default function Navbar() {
         <div style={{display: 'flex', alignItems: 'center', height:'100%', marginBottom: 25, position:'relative'}}>
             <div style={{display: 'flex', alignItems: 'center'}}>
                 <Logo/>
-                <p className="tguard" style={{marginLeft: 10}}>Treasury Guard</p>
+                <p className="text-md font-bold" style={{marginLeft: 10}}>Treasury Guard</p>
             </div>
             
             <div style={{right: 0, position: 'absolute', alignItems:'center', gap: 5, display:'flex'}}>
