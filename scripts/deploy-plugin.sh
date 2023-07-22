@@ -1,0 +1,1 @@
+forge create --rpc-url https://ethereum-goerli.publicnode.com --private-key $PRIVATE_KEY src/TestPlugin.sol:TestPlugin --etherscan-api-key EEM985ISVX7PS45BHVNW87TQ9APZK7AFXB  --verify

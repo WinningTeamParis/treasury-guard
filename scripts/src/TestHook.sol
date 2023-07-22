@@ -1,6 +1,8 @@
 import "safe-core-protocol/interfaces/Integrations.sol";
 import "safe-core-protocol/interfaces/Accounts.sol";
+import "safe-core-protocol/interfaces/Registry.sol";
 import "safe-core-protocol/DataTypes.sol";
+import "safe-core-protocol/base/HooksManager.sol";
 
 contract TestHook is ISafeProtocolHooks {
 
@@ -56,7 +58,7 @@ contract TestHook is ISafeProtocolHooks {
         emit PostCheckCalled(msg.sender, success, preCheckData);
     }
 
-    function supportsInterface(bytes4 interfaceId) external view returns (bool) {
+    function supportsInterface(bytes4 interfaceId) external pure returns (bool) {
         return true;
     }
 }

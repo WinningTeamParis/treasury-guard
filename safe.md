@@ -30,3 +30,11 @@ Other links:
 
 https://safe-global.notion.site/Safe-Hackathon-Success-Guide-26ccbd7263ab44808d8f00106f35c2d7
 https://github.com/5afe/safe-core-protocol-demo/blob/main/contracts/contracts/Plugins.sol#L70
+
+
+Each organization gets a Safe Account
+The safe account deploys the hook and the plugin
+
+how can I create a safe account? 
+accounts need to activate the hook individually?
+

@@ -918,6 +918,51 @@
         }
       }
     },
+    "lib/safe-core-protocol/contracts/base/HooksManager.sol": {
+      "lastModificationDate": 1689980606198,
+      "contentHash": "236714bb410422cfd3625d68c80ea718",
+      "sourceName": "lib/safe-core-protocol/contracts/base/HooksManager.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/safe-core-protocol/contracts/DataTypes.sol",
+        "lib/safe-core-protocol/contracts/interfaces/Accounts.sol",
+        "lib/safe-core-protocol/contracts/interfaces/Integrations.sol"
+      ],
+      "versionRequirement": "^0.8.18",
+      "artifacts": {
+        "HooksManager": {
+          "0.8.20+commit.a1b79de6.Darwin.appleclang": "HooksManager.sol/HooksManager.json"
+        }
+      }
+    },
     "lib/safe-core-protocol/contracts/interfaces/Accounts.sol": {
       "lastModificationDate": 1689980606199,
       "contentHash": "dc36bdee7b0ebe5423827399a37c6fc4",
@@ -1008,6 +1053,48 @@
         },
         "ISafeProtocolStaticFunctionHandler": {
           "0.8.20+commit.a1b79de6.Darwin.appleclang": "Integrations.sol/ISafeProtocolStaticFunctionHandler.json"
+        }
+      }
+    },
+    "lib/safe-core-protocol/contracts/interfaces/Registry.sol": {
+      "lastModificationDate": 1689980606199,
+      "contentHash": "fffcb4fd0b240a0bb758c0956e4de738",
+      "sourceName": "lib/safe-core-protocol/contracts/interfaces/Registry.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
+      ],
+      "versionRequirement": "^0.8.18",
+      "artifacts": {
+        "ISafeProtocolRegistry": {
+          "0.8.20+commit.a1b79de6.Darwin.appleclang": "Registry.sol/ISafeProtocolRegistry.json"
         }
       }
     },
@@ -1107,8 +1194,8 @@
       }
     },
     "src/TestHook.sol": {
-      "lastModificationDate": 1689980922291,
-      "contentHash": "5473911321d5b5cd68e5cc82d38ad8c4",
+      "lastModificationDate": 1690016000596,
+      "contentHash": "0fae06d137cffb3937b321fc4e5ebbed",
       "sourceName": "src/TestHook.sol",
       "solcConfig": {
         "settings": {
@@ -1141,13 +1228,61 @@
       "imports": [
         "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
         "lib/safe-core-protocol/contracts/DataTypes.sol",
+        "lib/safe-core-protocol/contracts/base/HooksManager.sol",
         "lib/safe-core-protocol/contracts/interfaces/Accounts.sol",
-        "lib/safe-core-protocol/contracts/interfaces/Integrations.sol"
+        "lib/safe-core-protocol/contracts/interfaces/Integrations.sol",
+        "lib/safe-core-protocol/contracts/interfaces/Registry.sol"
       ],
       "versionRequirement": null,
       "artifacts": {
         "TestHook": {
           "0.8.20+commit.a1b79de6.Darwin.appleclang": "TestHook.sol/TestHook.json"
+        }
+      }
+    },
+    "src/TestPlugin.sol": {
+      "lastModificationDate": 1690008485506,
+      "contentHash": "4931d687b8e7373a056679b65b2edda9",
+      "sourceName": "src/TestPlugin.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/safe-core-protocol/contracts/DataTypes.sol",
+        "lib/safe-core-protocol/contracts/base/HooksManager.sol",
+        "lib/safe-core-protocol/contracts/interfaces/Accounts.sol",
+        "lib/safe-core-protocol/contracts/interfaces/Integrations.sol"
+      ],
+      "versionRequirement": null,
+      "artifacts": {
+        "TestPlugin": {
+          "0.8.20+commit.a1b79de6.Darwin.appleclang": "TestPlugin.sol/TestPlugin.json"
         }
       }
     },
