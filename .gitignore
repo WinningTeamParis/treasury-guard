@@ -23,7 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 artifacts/**
-scripts/lib/**
-scripts/out/**
-scripts/cache/**
+contracts/lib/**
+contracts/out/**
+contracts/cache/**
 cache/**
+.idea/**/*
