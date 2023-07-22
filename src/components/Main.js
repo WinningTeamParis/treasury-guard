@@ -31,7 +31,7 @@ export default function Main() {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <div style={{overflowY:'auto'}}>
+    <div className='container' style={{overflowY:'scroll', height:'100vh', paddingBottom:'150px'}}>
       <WalletModal open={openModal} closeModal={setOpenModal}/>
 
       <div style={{marginTop: 30, position:'relative', display: 'flex'}}>

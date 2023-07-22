@@ -6,13 +6,21 @@ require("hardhat-gas-reporter")
 require("hardhat-contract-sizer")
 require("dotenv").config()
 
+const PRIVATE_KEY = process.env.PK || "0x"
+
 /** @type import('hardhat/config').HardhatUserConfig */
 
 module.exports = {
-    defaultNetwork: "hardhat",
+    defaultNetwork: "goerli",
     networks: {
         hardhat: {
             chainId: 31337,
+            blockConfirmations: 1,
+        },
+        goerli: {
+            url: "https://eth-goerli.g.alchemy.com/v2/demo",
+            chainId: 5,
+            accounts: [""],
             blockConfirmations: 1,
         },
     },
