@@ -20,7 +20,7 @@ module.exports = {
         goerli: {
             url: "https://eth-goerli.g.alchemy.com/v2/demo",
             chainId: 5,
-            accounts: ["decbf305301651dbd462c60c32e8fc09d2c8c145b1cb5274489d7f462edb051a"],
+            accounts: [""],
             blockConfirmations: 1,
         },
     },
