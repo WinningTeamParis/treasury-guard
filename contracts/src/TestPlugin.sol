@@ -112,7 +112,7 @@ contract TestPlugin is BasePluginWithEventMetadata {
                 appUrl: "https://treasure-guard-demo/#/relay/${plugin}"
             })
         )
-    {}
+    {} 
 
     function executeFromPlugin(ISafeProtocolManager manager, ISafe safe, bytes calldata data) external {
         SafeProtocolAction[] memory actions = new SafeProtocolAction[](1);

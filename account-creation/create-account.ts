@@ -158,7 +158,7 @@ async function send_test_transaction() {
 
 
 async function transaction_from_plugin() {
-    const pluginAddress = "0x6fe0dd0604E8615E494C08291375c570ab062E07";
+    const pluginAddress = "0x6a80F1B776D13dDb3Cf776B1aB2d23e500282FFb";
     const SAMPLE_PLUGIN_ABI = [
       "function executeFromPlugin(address manager, address safe, bytes calldata data) external"
     ]
@@ -189,14 +189,12 @@ async function transaction_from_plugin() {
     );
 
     const amount = ethers.utils.parseUnits('0.001', 'ether').toString()
-    const safeTransactionData: SafeTransactionDataPartial = {
-      to: "0x25238221BE3C80b7dDCD22CCB2Ff32cff32ecF91",
-      data: '0x',
-      value: amount
-    }
+    const safeTransactionData = ethers.utils.defaultAbiCoder.encode(
+      ['address', 'bytes', 'uint256'],
+      [ "0x25238221BE3C80b7dDCD22CCB2Ff32cff32ecF91", '0x', amount]
+    );
 
-    await plugin.executeFromPlugin(manager.address, "0x25238221BE3C80b7dDCD22CCB2Ff32cff32ecF91", safeTransactionData.data);
-   
+    await plugin.executeFromPlugin(manager.address, "0x19D3fF6711b60eB1a4AA4126D7d3d305b72C465f", safeTransactionData);
 }
 
 transaction_from_plugin();
