@@ -1,5 +1,4 @@
 import React from 'react'
-import Logo from '../svg/LogoSVG'
 import { Link } from 'react-router-dom'
 import logoPNG from './Group3.png'
 

@@ -4,15 +4,22 @@ import { SafeFactory } from '@safe-global/protocol-kit'
 import { SafeAccountConfig } from '@safe-global/protocol-kit'
 import Safe from '@safe-global/protocol-kit'
 import { SafeTransactionDataPartial, OperationType } from '@safe-global/safe-core-sdk-types'
+import protocolDeployments from "@safe-global/safe-core-protocol"
 
 import SafeApiKit from '@safe-global/api-kit'
 
-
-
 // https://chainlist.org/?search=goerli&testnets=true
 const RPC_URL='https://eth-goerli.public.blastapi.io'
-const provider = new ethers.providers.JsonRpcProvider(RPC_URL)
 
+class LoggingProvider extends ethers.providers.JsonRpcProvider {
+  async send(method: string, params: any): Promise<any> {
+      console.log('Method:', method);
+      console.log('Params:', params);
+      return super.send(method, params);
+  }
+}
+
+const provider = new LoggingProvider(RPC_URL);
 
 // Initialize signers
 const owner1Signer = new ethers.Wallet(process.env.PRIVATE_KEY!, provider)
@@ -119,7 +126,6 @@ async function enable_module() {
 async function send_test_transaction() {
     const safeSdk = await Safe.create({ ethAdapter: ethAdapterOwner1, safeAddress: "0x19D3fF6711b60eB1a4AA4126D7d3d305b72C465f" })
 
-
     // Any address can be used. In this example you will use vitalik.eth
     const destination = '0x25238221BE3C80b7dDCD22CCB2Ff32cff32ecF91'
     const amount = ethers.utils.parseUnits('0.001', 'ether').toString()
@@ -151,11 +157,53 @@ async function send_test_transaction() {
         console.log(`https://goerli.etherscan.io/tx/${receipt.transactionHash}`)
     }
 }
-
-deposit();
-
 // attach plugin to test protocol manager
 
 // plugin: 0x6fe0dd0604E8615E494C08291375c570ab062E07
 // protocol manager: 0x4026BA244d773F17FFA2d3173dAFe3fdF94216b9
 // registry: 0x9EFbBcAD12034BC310581B9837D545A951761F5A
+
+
+async function transaction_from_plugin() {
+    const pluginAddress = "0x719954B1689BD0AfdeC6E07A6e605d60938f79D3";
+    const SAMPLE_PLUGIN_ABI = [
+      "function executeFromPlugin(address manager, address safe, bytes calldata data) external"
+    ]
+
+    const getTestPlugin = async() => {
+      return new ethers.Contract(
+          pluginAddress,
+          SAMPLE_PLUGIN_ABI,
+          owner1Signer
+      )
+    }
+
+    const plugin = await getTestPlugin();
+
+    const safeProtocolInfo = protocolDeployments[5][0].contracts.TestSafeProtocolManager;
+    
+    const registryInfo = protocolDeployments[5][0].contracts.TestSafeProtocolRegistryUnrestricted;
+
+    const registry = new ethers.Contract(
+      registryInfo.address,
+      registryInfo.abi
+    );
+
+    const manager = new ethers.Contract(
+      safeProtocolInfo.address,
+      safeProtocolInfo.abi,
+      provider
+    );
+
+    const amount = ethers.utils.parseUnits('0.001', 'ether').toString()
+    const safeTransactionData = ethers.utils.defaultAbiCoder.encode(
+      ['address', 'bytes', 'uint256'],
+      [ "0x25238221BE3C80b7dDCD22CCB2Ff32cff32ecF91", '0x', amount]
+    );
+    
+    console.log(manager.address);
+    console.log(safeTransactionData);
+    await plugin.executeFromPlugin(manager.address, "0x19D3fF6711b60eB1a4AA4126D7d3d305b72C465f", safeTransactionData);
+}
+
+transaction_from_plugin();

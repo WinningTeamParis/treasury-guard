@@ -1,5 +1,5 @@
 import './modalCss.css'
-import {Button, Input, Loading, Text} from '@nextui-org/react'
+import {Loading} from '@nextui-org/react'
 import {Fragment, useCallback, useEffect, useState} from 'react'
 import {pair} from '../utils/WalletConnectUtils'
 import PageHeader from './PageHeader'

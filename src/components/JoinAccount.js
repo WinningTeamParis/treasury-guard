@@ -1,4 +1,3 @@
-import { display } from '@mui/system'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logoPNG from './Group3.png'

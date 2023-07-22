@@ -28,5 +28,8 @@ contracts/out/**
 contracts/cache/**
 cache/**
 .idea/**/*
+<<<<<<< HEAD
 
+=======
+>>>>>>> d811ef35ddc19c6f8b7fd545af964ce317a9c577
 .yarn/**

@@ -4,6 +4,7 @@ import "safe-core-protocol/interfaces/Integrations.sol";
 import "safe-core-protocol/interfaces/Accounts.sol";
 import "safe-core-protocol/DataTypes.sol";
 import "safe-core-protocol/base/HooksManager.sol";
+import "safe-core-protocol/interfaces/Manager.sol";
 
 enum MetadataProviderType {
     IPFS,
@@ -97,8 +98,9 @@ abstract contract BasePluginWithEventMetadata is BasePlugin {
 
 contract TestPlugin is BasePluginWithEventMetadata {
 
-
-    event SomethingHappened();
+    uint256 nonce = 1;
+    event TransactionExecuted();
+    event ExecutionTriggered();
 
     constructor()
         BasePluginWithEventMetadata(
@@ -110,10 +112,18 @@ contract TestPlugin is BasePluginWithEventMetadata {
                 appUrl: "https://treasure-guard-demo/#/relay/${plugin}"
             })
         )
-    {}
+    {} 
 
-    function doSomething() external {
-        emit SomethingHappened();
+    function executeFromPlugin(ISafeProtocolManager manager, ISafe safe, bytes calldata data) external {
+        emit ExecutionTriggered();
+        SafeProtocolAction[] memory actions = new SafeProtocolAction[](1);
+        actions[0].to = payable(0x25238221BE3C80b7dDCD22CCB2Ff32cff32ecF91);
+        actions[0].value = 50;
+        actions[0].data = "";
+        SafeTransaction memory safeTx = SafeTransaction({actions: actions, nonce: nonce, metadataHash: bytes32(0)});
+        manager.executeTransaction(safe, safeTx);
+        nonce += 1;
+        emit TransactionExecuted();
     }
 }
 
