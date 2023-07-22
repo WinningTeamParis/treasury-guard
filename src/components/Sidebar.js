@@ -4,6 +4,7 @@ import Dashboard from '../svg/DashboardSVG'
 import Help from '../svg/HelpSVG'
 import LogOut from '../svg/LogOutSVG'
 import './Sidebar.css'
+import { Link } from "react-router-dom";
 
 
 export default function Sidebar() {
@@ -26,10 +27,11 @@ export default function Sidebar() {
                 <Dashboard/>
                 Dashboard
             </button>
+            <Link to="/faq">
             <button className="dashBut" style={{width: '100%', gap:15, cursor: 'pointer', padding: '12px', height: '50px', display: 'flex', alignItems: 'center', fontSize: '14px', fontWeight: 600, textAlign: 'center'}}>
                 <Help/>
                 Help Centre
-            </button>
+            </button></Link>
             <button className="dashBut" style={{width: '100%', gap:15, cursor: 'pointer', padding: '12px', height: '50px', display: 'flex', alignItems: 'center', fontSize: '14px', fontWeight: 600, textAlign: 'center'}}>
                 <LogOut/>
                 Log Out

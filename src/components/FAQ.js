@@ -6,6 +6,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import logoPNG from './Group3.png'
+import { Link } from "react-router-dom";
 
 
 export default function FAQ() {
@@ -16,14 +17,16 @@ export default function FAQ() {
   };
 
   return (
-        <div>
-      <div style={{justifyContent:'center', alignItems:'center', display:'flex', margin: 20}}>
-        <img style={{height:30}} src={logoPNG} alt="" />
-        <h1>TreasuryGuard</h1>
-      </div>
-      <div style={{justifyContent:'center', alignItems:'center', display:'flex', margin: 20}}>
-        <h1 className='text-3xl font-bold m-12'>How can we help you?</h1>
-      </div>
+    <div>
+        <Link to="/">
+            <div style={{justifyContent:'center', alignItems:'center', display:'flex', margin: 20}}>
+                <img style={{height:30}} src={logoPNG} alt="" />
+                <h1>TreasuryGuard</h1>
+            </div>
+        </Link>
+        <div style={{justifyContent:'center', alignItems:'center', display:'flex', margin: 20}}>
+            <h1 className='text-3xl font-bold m-12'>How can we help you?</h1>
+        </div>
       <div style={{height: '100vh', margin:'10%', marginTop: 0}}>
         
         {/* <Home/> */}
