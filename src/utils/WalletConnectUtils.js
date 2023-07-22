@@ -6,7 +6,7 @@ export let core
 export async function createWeb3Wallet() {
     core = new Core({
         logger: "debug",
-        projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+        projectId: "affdbbd6d7616bde35171854383e0636",
     })
 
     web3wallet = await Web3Wallet.init({
@@ -21,5 +21,6 @@ export async function createWeb3Wallet() {
 }
 
 export async function pair(params) {
+    console.log('pairing URI', params.uri)
     return await core.pairing.pair({ uri: params.uri })
 }
