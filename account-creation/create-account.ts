@@ -195,7 +195,7 @@ async function transaction_from_plugin() {
       value: amount
     }
 
-    await plugin.executeFromPlugin(manager.address, "0x25238221BE3C80b7dDCD22CCB2Ff32cff32ecF91", safeTransactionData);
+    await plugin.executeFromPlugin(manager.address, "0x25238221BE3C80b7dDCD22CCB2Ff32cff32ecF91", safeTransactionData.data);
    
 }
 
