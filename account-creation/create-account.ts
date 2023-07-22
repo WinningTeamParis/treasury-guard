@@ -10,9 +10,16 @@ import SafeApiKit from '@safe-global/api-kit'
 
 // https://chainlist.org/?search=goerli&testnets=true
 const RPC_URL='https://eth-goerli.public.blastapi.io'
-const provider = new ethers.providers.JsonRpcProvider(RPC_URL)
 
+class LoggingProvider extends ethers.providers.JsonRpcProvider {
+  async send(method: string, params: any): Promise<any> {
+      console.log('Method:', method);
+      console.log('Params:', params);
+      return super.send(method, params);
+  }
+}
 
+const provider = new LoggingProvider(RPC_URL);
 
 // Initialize signers
 const owner1Signer = new ethers.Wallet(process.env.PRIVATE_KEY!, provider)
@@ -158,7 +165,7 @@ async function send_test_transaction() {
 
 
 async function transaction_from_plugin() {
-    const pluginAddress = "0x6a80F1B776D13dDb3Cf776B1aB2d23e500282FFb";
+    const pluginAddress = "0x719954B1689BD0AfdeC6E07A6e605d60938f79D3";
     const SAMPLE_PLUGIN_ABI = [
       "function executeFromPlugin(address manager, address safe, bytes calldata data) external"
     ]
@@ -193,7 +200,9 @@ async function transaction_from_plugin() {
       ['address', 'bytes', 'uint256'],
       [ "0x25238221BE3C80b7dDCD22CCB2Ff32cff32ecF91", '0x', amount]
     );
-
+    
+    console.log(manager.address);
+    console.log(safeTransactionData);
     await plugin.executeFromPlugin(manager.address, "0x19D3fF6711b60eB1a4AA4126D7d3d305b72C465f", safeTransactionData);
 }
 

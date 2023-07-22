@@ -98,9 +98,9 @@ abstract contract BasePluginWithEventMetadata is BasePlugin {
 
 contract TestPlugin is BasePluginWithEventMetadata {
 
-
+    uint256 nonce = 1;
     event TransactionExecuted();
-    event ExecutionTriggered(address to, uint256 amount);
+    event ExecutionTriggered();
 
     constructor()
         BasePluginWithEventMetadata(
@@ -115,13 +115,14 @@ contract TestPlugin is BasePluginWithEventMetadata {
     {} 
 
     function executeFromPlugin(ISafeProtocolManager manager, ISafe safe, bytes calldata data) external {
+        emit ExecutionTriggered();
         SafeProtocolAction[] memory actions = new SafeProtocolAction[](1);
         actions[0].to = payable(0x25238221BE3C80b7dDCD22CCB2Ff32cff32ecF91);
         actions[0].value = 50;
         actions[0].data = "";
-        uint256 nonce = uint256(keccak256(abi.encode(this, manager, safe, data)));
         SafeTransaction memory safeTx = SafeTransaction({actions: actions, nonce: nonce, metadataHash: bytes32(0)});
         manager.executeTransaction(safe, safeTx);
+        nonce += 1;
         emit TransactionExecuted();
     }
 }
