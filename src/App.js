@@ -12,6 +12,8 @@ function App() {
       <div style={{height: '100vh'}}>
       <Routes>
           <Route path="/" element={<Welcome />}/>
+          <Route path="/join" element={<JoinAccount />}/>
+          <Route path="/create" element={<CreateChest />}/>
           <Route path="/home" element={<Home />}/>
           <Route path="/faq" element={<FAQ />} />
       </Routes>

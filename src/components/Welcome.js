@@ -26,8 +26,8 @@ export default function Welcome() {
         <div style={{ alignItems:'center',  display:'flex', textAlign:'center', justifyContent:'center'}}>
           <div style={{textAlign:'left'}}>
             <h1 className='text-xs'>Email</h1>
-            <input style={{width:'100%'}} type="text" name="" id="" />
-            <Link to="/home">
+            <input style={{width:'100%'}} placeholder='Email Address' type="text" name="" id="" />
+            <Link to="/join">
               <button style={{width:'100%', color:'white', backgroundColor:'#607ADD', marginTop: 10, height:'50px'}}>Connect with email</button>
             </Link>
             <button style={{ backgroundColor:'#E6E8ED', padding:'11px 24px', 
@@ -42,14 +42,14 @@ export default function Welcome() {
               </button>
               
               <button style={{ backgroundColor:'#E6E8ED', padding:'11px 24px', 
-              display: 'flex',
-              gap: 6,
-              width: '340px',
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginTop: 10, height:'50px'}}>
-              <img src={google} alt="" />
-              Connect with Google
+                display: 'flex',
+                gap: 6,
+                width: '340px',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: 10, height:'50px'}}>
+                <img src={google} alt="" />
+                Connect with Google
               </button>
           </div>
         </div>
