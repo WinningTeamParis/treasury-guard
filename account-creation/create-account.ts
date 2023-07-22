@@ -48,7 +48,7 @@ async function create_account() {
 
 async function deposit() {
 
-    const safeAmount = ethers.utils.parseUnits('0.01', 'ether').toHexString()
+    const safeAmount = ethers.utils.parseUnits('0.05', 'ether').toHexString()
 
     const transactionParameters = {
         to: "0x19D3fF6711b60eB1a4AA4126D7d3d305b72C465f",
@@ -152,4 +152,10 @@ async function send_test_transaction() {
     }
 }
 
-send_test_transaction();
+deposit();
+
+// attach plugin to test protocol manager
+
+// plugin: 0x6fe0dd0604E8615E494C08291375c570ab062E07
+// protocol manager: 0x4026BA244d773F17FFA2d3173dAFe3fdF94216b9
+// registry: 0x9EFbBcAD12034BC310581B9837D545A951761F5A

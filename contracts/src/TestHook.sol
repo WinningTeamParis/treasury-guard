@@ -1,3 +1,5 @@
+pragma solidity ^0.8.19;
+
 import "safe-core-protocol/interfaces/Integrations.sol";
 import "safe-core-protocol/interfaces/Accounts.sol";
 import "safe-core-protocol/interfaces/Registry.sol";
