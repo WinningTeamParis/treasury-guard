@@ -8,6 +8,23 @@ import google from './Google.png'
 import metamask from './metamask.png'
 import walletcon from './WalletConnect.svg'
 
+function setWallet(accounts: any) {
+  console.log(accounts);
+}
+
+const updateWallet = async (accounts:any) => {     
+    setWallet({ accounts })                         
+}   
+
+const metamaskEnabled = typeof window.ethereum !== "undefined";
+
+const handleConnect = async () => {                
+    let accounts = await window.ethereum.request({   
+      method: "eth_requestAccounts",                 
+    })                                               
+    updateWallet(accounts)                           
+}  
+
 
 export default function Welcome() {
   return (
@@ -65,7 +82,7 @@ export default function Welcome() {
               width: '340px',
               justifyContent: 'center',
               alignItems: 'center',
-              marginTop: 10, height:'50px'}}>
+              marginTop: 10, height:'50px'}} onClick={handleConnect}>
               <img src={metamask} alt="" />
               Connect with Metamask
               </button>            
