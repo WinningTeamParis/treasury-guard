@@ -17,7 +17,7 @@ export default function Home() {
 
     return (
         <NextUIProvider theme={createTheme({type: 'white'})}>
-            <div style={{display: 'flex', height: '100%', overflow: 'hidden'}}>
+            <div style={{display: 'flex', height: '100vh', overflow: 'hidden'}}>
                 <Sidebar/>
                 <Navbar/>
                 {/*<Activity/>*/}

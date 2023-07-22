@@ -6,6 +6,8 @@ import PageHeader from './PageHeader'
 import {web3wallet} from "../utils/WalletConnectUtils";
 import ModalStore from "../store/ModalStore";
 import {EIP155_SIGNING_METHODS} from "../data/EIP155Data";
+import '../App.css'
+
 
 const WalletModal = ({open, closeModal}) => {
     const [uri, setUri] = useState('')
@@ -103,11 +105,12 @@ const WalletModal = ({open, closeModal}) => {
         <div className='modalBackground'>
             <div className='modalContainer'>
                 <Fragment>
+                    <button onClick={() => closeModal(false)}>close</button>
                     <PageHeader title="WalletConnect"/>
 
                     <Input
-                        css={{width: '100%'}}
-                        bordered
+                        className='lalala'
+                        
                         aria-label="wc url connect input"
                         placeholder="e.g. wc:a281567bb3e4..."
                         onChange={ e => setUri(e.target.value)}
