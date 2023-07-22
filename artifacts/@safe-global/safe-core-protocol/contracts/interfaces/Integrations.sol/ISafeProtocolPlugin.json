@@ -1,0 +1,68 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ISafeProtocolPlugin",
+  "sourceName": "@safe-global/safe-core-protocol/contracts/interfaces/Integrations.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "metaProvider",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "providerType",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "location",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "requiresRootAccess",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "requiresRootAccess",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "version",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

@@ -1,0 +1,391 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "integration",
+          "type": "address"
+        }
+      ],
+      "name": "check",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "listedAt",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "flaggedAt",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "check(address)": "c23697a8",
+    "supportsInterface(bytes4)": "01ffc9a7"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"integration\",\"type\":\"address\"}],\"name\":\"check\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"listedAt\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"flaggedAt\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"check(address)\":{\"params\":{\"integration\":\"Address of the integration that should be checked\"},\"returns\":{\"flaggedAt\":\"MUST return the block number when the integration was listed in the flagged as faulty (or 0 if not flagged)\",\"listedAt\":\"MUST return the block number when the integration was listed in the registry (or 0 if not listed)\"}},\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/safe-core-protocol/contracts/interfaces/Registry.sol\":\"ISafeProtocolRegistry\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":safe-core-protocol/=lib/safe-core-protocol/contracts/\"]},\"sources\":{\"lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"lib/safe-core-protocol/contracts/interfaces/Registry.sol\":{\"keccak256\":\"0xaa13e8db037643ecf1d2e0882f9dc67c59cee4d4ea1ba069a64de38f9a21f5da\",\"license\":\"LGPL-3.0-only\",\"urls\":[\"bzz-raw://9ea90c4f1ced22288d1477918fa2d12be818502ea53d401486b1e5bcd37b5d37\",\"dweb:/ipfs/QmStDswBkz2jNCev3H667oCnrZRYNvpHWvByNdk9KtLH1K\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.20+commit.a1b79de6"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "integration",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "check",
+          "outputs": [
+            {
+              "internalType": "uint64",
+              "name": "listedAt",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "flaggedAt",
+              "type": "uint64"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "interfaceId",
+              "type": "bytes4"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "supportsInterface",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "check(address)": {
+            "params": {
+              "integration": "Address of the integration that should be checked"
+            },
+            "returns": {
+              "flaggedAt": "MUST return the block number when the integration was listed in the flagged as faulty (or 0 if not flagged)",
+              "listedAt": "MUST return the block number when the integration was listed in the registry (or 0 if not listed)"
+            }
+          },
+          "supportsInterface(bytes4)": {
+            "details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas."
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=lib/openzeppelin-contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        ":openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":safe-core-protocol/=lib/safe-core-protocol/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/safe-core-protocol/contracts/interfaces/Registry.sol": "ISafeProtocolRegistry"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "lib/safe-core-protocol/contracts/interfaces/Registry.sol": {
+        "keccak256": "0xaa13e8db037643ecf1d2e0882f9dc67c59cee4d4ea1ba069a64de38f9a21f5da",
+        "urls": [
+          "bzz-raw://9ea90c4f1ced22288d1477918fa2d12be818502ea53d401486b1e5bcd37b5d37",
+          "dweb:/ipfs/QmStDswBkz2jNCev3H667oCnrZRYNvpHWvByNdk9KtLH1K"
+        ],
+        "license": "LGPL-3.0-only"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/safe-core-protocol/contracts/interfaces/Registry.sol",
+    "id": 289,
+    "exportedSymbols": {
+      "IERC165": [
+        11
+      ],
+      "ISafeProtocolRegistry": [
+        288
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "42:587:6",
+    "nodes": [
+      {
+        "id": 273,
+        "nodeType": "PragmaDirective",
+        "src": "42:24:6",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 275,
+        "nodeType": "ImportDirective",
+        "src": "67:80:6",
+        "nodes": [],
+        "absolutePath": "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "file": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 289,
+        "sourceUnit": 12,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 274,
+              "name": "IERC165",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 11,
+              "src": "75:7:6",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 288,
+        "nodeType": "ContractDefinition",
+        "src": "149:479:6",
+        "nodes": [
+          {
+            "id": 287,
+            "nodeType": "FunctionDefinition",
+            "src": "532:94:6",
+            "nodes": [],
+            "documentation": {
+              "id": 278,
+              "nodeType": "StructuredDocumentation",
+              "src": "198:329:6",
+              "text": "@param integration Address of the integration that should be checked\n @return listedAt MUST return the block number when the integration was listed in the registry (or 0 if not listed)\n @return flaggedAt MUST return the block number when the integration was listed in the flagged as faulty (or 0 if not flagged)"
+            },
+            "functionSelector": "c23697a8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "check",
+            "nameLocation": "541:5:6",
+            "parameters": {
+              "id": 281,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 280,
+                  "mutability": "mutable",
+                  "name": "integration",
+                  "nameLocation": "555:11:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 287,
+                  "src": "547:19:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 279,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:21:6"
+            },
+            "returnParameters": {
+              "id": 286,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 283,
+                  "mutability": "mutable",
+                  "name": "listedAt",
+                  "nameLocation": "598:8:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 287,
+                  "src": "591:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 282,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "591:6:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 285,
+                  "mutability": "mutable",
+                  "name": "flaggedAt",
+                  "nameLocation": "615:9:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 287,
+                  "src": "608:16:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 284,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "608:6:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "590:35:6"
+            },
+            "scope": 288,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 276,
+              "name": "IERC165",
+              "nameLocations": [
+                "184:7:6"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 11,
+              "src": "184:7:6"
+            },
+            "id": 277,
+            "nodeType": "InheritanceSpecifier",
+            "src": "184:7:6"
+          }
+        ],
+        "canonicalName": "ISafeProtocolRegistry",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          288,
+          11
+        ],
+        "name": "ISafeProtocolRegistry",
+        "nameLocation": "159:21:6",
+        "scope": 289,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "LGPL-3.0-only"
+  },
+  "id": 6
+}

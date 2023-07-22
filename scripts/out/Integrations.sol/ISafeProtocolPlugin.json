@@ -1,0 +1,1657 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "metadataProvider",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "providerType",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "location",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "requiresRootAccess",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "requiresRootAccess",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "version",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "metadataProvider()": "d3d72d2a",
+    "name()": "06fdde03",
+    "requiresRootAccess()": "be193d27",
+    "version()": "54fd4d50"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"metadataProvider\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"providerType\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"location\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"requiresRootAccess\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"requiresRootAccess\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"version\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"version\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"metadataProvider()\":{\"returns\":{\"location\":\"bytes\",\"providerType\":\"uint256 Type of metadata provider\"}},\"name()\":{\"returns\":{\"name\":\"string name of the plugin\"}},\"requiresRootAccess()\":{\"returns\":{\"requiresRootAccess\":\"True if root access is required, false otherwise.\"}},\"version()\":{\"returns\":{\"version\":\"string version of the plugin\"}}},\"title\":\"ISafeProtocolPlugin - An interface that a Safe plugin should implement\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"metadataProvider()\":{\"notice\":\"A funtion that returns version of the plugin.         TODO: Define types of metadata provider and possible values of location in each of the cases.\"},\"name()\":{\"notice\":\"A funtion that returns name of the plugin\"},\"requiresRootAccess()\":{\"notice\":\"A function that indicates if the plugin requires root access to a Safe.\"},\"version()\":{\"notice\":\"A funtion that returns version of the plugin\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/safe-core-protocol/contracts/interfaces/Integrations.sol\":\"ISafeProtocolPlugin\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":safe-core-protocol/=lib/safe-core-protocol/contracts/\"]},\"sources\":{\"lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"lib/safe-core-protocol/contracts/DataTypes.sol\":{\"keccak256\":\"0xfcce6a99ceb499693f9a33aa624affcefcbb9af1fb328f4b2bc4b9f245bb48ba\",\"license\":\"LGPL-3.0-only\",\"urls\":[\"bzz-raw://273bc0facf9bbdce85d1d0efc13b7611fcd714d7fe892941927d30b4a3d86ea5\",\"dweb:/ipfs/Qmb6SUZJKBq9MWrKpEX2aA3iBJgtoZWnDbDc6DksVczH5m\"]},\"lib/safe-core-protocol/contracts/interfaces/Accounts.sol\":{\"keccak256\":\"0xa3dd0d1c1c701479d294e384c4350e3829e69045a2c740a62da353eac45ef258\",\"license\":\"LGPL-3.0-only\",\"urls\":[\"bzz-raw://d5b545db0a70b777c30939b8f77f210a269f05f160566cba32eb0337f931a185\",\"dweb:/ipfs/QmcqyCtUotXRCe2mdCkMPtAs2pAViKmA2Pfce92pjZNiXX\"]},\"lib/safe-core-protocol/contracts/interfaces/Integrations.sol\":{\"keccak256\":\"0x8599ee4455a0ef195e4b064017ff432186819838284517ecacb34a924d2e108d\",\"license\":\"LGPL-3.0-only\",\"urls\":[\"bzz-raw://12285f4ad925d46c3fb7131ed18014b0d92c058ccfb8d56f39d15decbde551a1\",\"dweb:/ipfs/QmaEMkLuzC8YWmySFjiR5ABJoURwYH9ixVqu2BY4dkd5AW\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.20+commit.a1b79de6"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "metadataProvider",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "providerType",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "location",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "requiresRootAccess",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "requiresRootAccess",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "version",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "version",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "metadataProvider()": {
+            "returns": {
+              "location": "bytes",
+              "providerType": "uint256 Type of metadata provider"
+            }
+          },
+          "name()": {
+            "returns": {
+              "name": "string name of the plugin"
+            }
+          },
+          "requiresRootAccess()": {
+            "returns": {
+              "requiresRootAccess": "True if root access is required, false otherwise."
+            }
+          },
+          "version()": {
+            "returns": {
+              "version": "string version of the plugin"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "metadataProvider()": {
+            "notice": "A funtion that returns version of the plugin.         TODO: Define types of metadata provider and possible values of location in each of the cases."
+          },
+          "name()": {
+            "notice": "A funtion that returns name of the plugin"
+          },
+          "requiresRootAccess()": {
+            "notice": "A function that indicates if the plugin requires root access to a Safe."
+          },
+          "version()": {
+            "notice": "A funtion that returns version of the plugin"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=lib/openzeppelin-contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        ":openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":safe-core-protocol/=lib/safe-core-protocol/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/safe-core-protocol/contracts/interfaces/Integrations.sol": "ISafeProtocolPlugin"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "lib/safe-core-protocol/contracts/DataTypes.sol": {
+        "keccak256": "0xfcce6a99ceb499693f9a33aa624affcefcbb9af1fb328f4b2bc4b9f245bb48ba",
+        "urls": [
+          "bzz-raw://273bc0facf9bbdce85d1d0efc13b7611fcd714d7fe892941927d30b4a3d86ea5",
+          "dweb:/ipfs/Qmb6SUZJKBq9MWrKpEX2aA3iBJgtoZWnDbDc6DksVczH5m"
+        ],
+        "license": "LGPL-3.0-only"
+      },
+      "lib/safe-core-protocol/contracts/interfaces/Accounts.sol": {
+        "keccak256": "0xa3dd0d1c1c701479d294e384c4350e3829e69045a2c740a62da353eac45ef258",
+        "urls": [
+          "bzz-raw://d5b545db0a70b777c30939b8f77f210a269f05f160566cba32eb0337f931a185",
+          "dweb:/ipfs/QmcqyCtUotXRCe2mdCkMPtAs2pAViKmA2Pfce92pjZNiXX"
+        ],
+        "license": "LGPL-3.0-only"
+      },
+      "lib/safe-core-protocol/contracts/interfaces/Integrations.sol": {
+        "keccak256": "0x8599ee4455a0ef195e4b064017ff432186819838284517ecacb34a924d2e108d",
+        "urls": [
+          "bzz-raw://12285f4ad925d46c3fb7131ed18014b0d92c058ccfb8d56f39d15decbde551a1",
+          "dweb:/ipfs/QmaEMkLuzC8YWmySFjiR5ABJoURwYH9ixVqu2BY4dkd5AW"
+        ],
+        "license": "LGPL-3.0-only"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/safe-core-protocol/contracts/interfaces/Integrations.sol",
+    "id": 188,
+    "exportedSymbols": {
+      "IERC165": [
+        11
+      ],
+      "ISafe": [
+        69
+      ],
+      "ISafeProtocolFunctionHandler": [
+        95
+      ],
+      "ISafeProtocolHooks": [
+        159
+      ],
+      "ISafeProtocolPlugin": [
+        187
+      ],
+      "ISafeProtocolStaticFunctionHandler": [
+        112
+      ],
+      "SafeRootAccess": [
+        37
+      ],
+      "SafeTransaction": [
+        29
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "42:5118:3",
+    "nodes": [
+      {
+        "id": 71,
+        "nodeType": "PragmaDirective",
+        "src": "42:24:3",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 73,
+        "nodeType": "ImportDirective",
+        "src": "67:37:3",
+        "nodes": [],
+        "absolutePath": "lib/safe-core-protocol/contracts/interfaces/Accounts.sol",
+        "file": "./Accounts.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 188,
+        "sourceUnit": 70,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 72,
+              "name": "ISafe",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 69,
+              "src": "75:5:3",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 76,
+        "nodeType": "ImportDirective",
+        "src": "105:65:3",
+        "nodes": [],
+        "absolutePath": "lib/safe-core-protocol/contracts/DataTypes.sol",
+        "file": "../DataTypes.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 188,
+        "sourceUnit": 38,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 74,
+              "name": "SafeTransaction",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 29,
+              "src": "113:15:3",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 75,
+              "name": "SafeRootAccess",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 37,
+              "src": "130:14:3",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 78,
+        "nodeType": "ImportDirective",
+        "src": "171:80:3",
+        "nodes": [],
+        "absolutePath": "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "file": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 188,
+        "sourceUnit": 12,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 77,
+              "name": "IERC165",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 11,
+              "src": "179:7:3",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 95,
+        "nodeType": "ContractDefinition",
+        "src": "515:459:3",
+        "nodes": [
+          {
+            "id": 94,
+            "nodeType": "FunctionDefinition",
+            "src": "853:119:3",
+            "nodes": [],
+            "documentation": {
+              "id": 80,
+              "nodeType": "StructuredDocumentation",
+              "src": "560:288:3",
+              "text": " @notice TODO: Add more explaination\n @param safe A Safe instance\n @param sender Address of the sender\n @param value Amount of ETH\n @param data Arbitrary length bytes\n @return result Arbitrary length bytes containing result of the operation"
+            },
+            "functionSelector": "25d6803f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "handle",
+            "nameLocation": "862:6:3",
+            "parameters": {
+              "id": 90,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 83,
+                  "mutability": "mutable",
+                  "name": "safe",
+                  "nameLocation": "875:4:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 94,
+                  "src": "869:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISafe_$69",
+                    "typeString": "contract ISafe"
+                  },
+                  "typeName": {
+                    "id": 82,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 81,
+                      "name": "ISafe",
+                      "nameLocations": [
+                        "869:5:3"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 69,
+                      "src": "869:5:3"
+                    },
+                    "referencedDeclaration": 69,
+                    "src": "869:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISafe_$69",
+                      "typeString": "contract ISafe"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 85,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "889:6:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 94,
+                  "src": "881:14:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 84,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "881:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 87,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nameLocation": "905:5:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 94,
+                  "src": "897:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 86,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "897:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 89,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "927:4:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 94,
+                  "src": "912:19:3",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 88,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "912:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "868:64:3"
+            },
+            "returnParameters": {
+              "id": 93,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 92,
+                  "mutability": "mutable",
+                  "name": "result",
+                  "nameLocation": "964:6:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 94,
+                  "src": "951:19:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 91,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "951:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "950:21:3"
+            },
+            "scope": 95,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISafeProtocolFunctionHandler",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 79,
+          "nodeType": "StructuredDocumentation",
+          "src": "253:261:3",
+          "text": " @title ISafeProtocolStaticFunctionHandler - An interface that a Safe functionhandler should implement\n @notice In Safe{Core} Protocol, a function handler can be used to add additional functionality to a Safe.\n         TODO: Add more explaination."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          95
+        ],
+        "name": "ISafeProtocolFunctionHandler",
+        "nameLocation": "525:28:3",
+        "scope": 188,
+        "usedErrors": [],
+        "usedEvents": []
+      },
+      {
+        "id": 112,
+        "nodeType": "ContractDefinition",
+        "src": "1273:470:3",
+        "nodes": [
+          {
+            "id": 111,
+            "nodeType": "FunctionDefinition",
+            "src": "1617:124:3",
+            "nodes": [],
+            "documentation": {
+              "id": 97,
+              "nodeType": "StructuredDocumentation",
+              "src": "1324:288:3",
+              "text": " @notice TODO: Add more explaination\n @param safe A Safe instance\n @param sender Address of the sender\n @param value Amount of ETH\n @param data Arbitrary length bytes\n @return result Arbitrary length bytes containing result of the operation"
+            },
+            "functionSelector": "25d6803f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "handle",
+            "nameLocation": "1626:6:3",
+            "parameters": {
+              "id": 107,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 100,
+                  "mutability": "mutable",
+                  "name": "safe",
+                  "nameLocation": "1639:4:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 111,
+                  "src": "1633:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISafe_$69",
+                    "typeString": "contract ISafe"
+                  },
+                  "typeName": {
+                    "id": 99,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 98,
+                      "name": "ISafe",
+                      "nameLocations": [
+                        "1633:5:3"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 69,
+                      "src": "1633:5:3"
+                    },
+                    "referencedDeclaration": 69,
+                    "src": "1633:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISafe_$69",
+                      "typeString": "contract ISafe"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 102,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "1653:6:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 111,
+                  "src": "1645:14:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 101,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1645:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 104,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nameLocation": "1669:5:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 111,
+                  "src": "1661:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 103,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1661:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 106,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "1691:4:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 111,
+                  "src": "1676:19:3",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 105,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1676:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1632:64:3"
+            },
+            "returnParameters": {
+              "id": 110,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 109,
+                  "mutability": "mutable",
+                  "name": "result",
+                  "nameLocation": "1733:6:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 111,
+                  "src": "1720:19:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 108,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1720:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1719:21:3"
+            },
+            "scope": 112,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISafeProtocolStaticFunctionHandler",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 96,
+          "nodeType": "StructuredDocumentation",
+          "src": "976:296:3",
+          "text": " @title ISafeProtocolStaticFunctionHandler - An interface that a Safe functionhandler should implement in case when handling static calls\n @notice In Safe{Core} Protocol, a function handler can be used to add additional functionality to a Safe.\n         TODO: Add more explaination."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          112
+        ],
+        "name": "ISafeProtocolStaticFunctionHandler",
+        "nameLocation": "1283:34:3",
+        "scope": 188,
+        "usedErrors": [],
+        "usedEvents": []
+      },
+      {
+        "id": 159,
+        "nodeType": "ContractDefinition",
+        "src": "1962:2040:3",
+        "nodes": [
+          {
+            "id": 131,
+            "nodeType": "FunctionDefinition",
+            "src": "2519:195:3",
+            "nodes": [],
+            "documentation": {
+              "id": 116,
+              "nodeType": "StructuredDocumentation",
+              "src": "2008:506:3",
+              "text": " @notice A function that will be called by a Safe before the execution of a transaction if the hooks are enabled\n @dev Add custom logic in this function to validate the pre-state and contents of transaction for non-root access.\n @param safe A Safe instance\n @param tx A struct of type SafeTransaction that contains the details of the transaction.\n @param executionType uint256\n @param executionMeta Arbitrary length of bytes\n @return preCheckData bytes"
+            },
+            "functionSelector": "176ae7b7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "preCheck",
+            "nameLocation": "2528:8:3",
+            "parameters": {
+              "id": 127,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 119,
+                  "mutability": "mutable",
+                  "name": "safe",
+                  "nameLocation": "2552:4:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 131,
+                  "src": "2546:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISafe_$69",
+                    "typeString": "contract ISafe"
+                  },
+                  "typeName": {
+                    "id": 118,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 117,
+                      "name": "ISafe",
+                      "nameLocations": [
+                        "2546:5:3"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 69,
+                      "src": "2546:5:3"
+                    },
+                    "referencedDeclaration": 69,
+                    "src": "2546:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISafe_$69",
+                      "typeString": "contract ISafe"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 122,
+                  "mutability": "mutable",
+                  "name": "tx",
+                  "nameLocation": "2591:2:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 131,
+                  "src": "2566:27:3",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SafeTransaction_$29_calldata_ptr",
+                    "typeString": "struct SafeTransaction"
+                  },
+                  "typeName": {
+                    "id": 121,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 120,
+                      "name": "SafeTransaction",
+                      "nameLocations": [
+                        "2566:15:3"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 29,
+                      "src": "2566:15:3"
+                    },
+                    "referencedDeclaration": 29,
+                    "src": "2566:15:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SafeTransaction_$29_storage_ptr",
+                      "typeString": "struct SafeTransaction"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 124,
+                  "mutability": "mutable",
+                  "name": "executionType",
+                  "nameLocation": "2611:13:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 131,
+                  "src": "2603:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 123,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2603:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 126,
+                  "mutability": "mutable",
+                  "name": "executionMeta",
+                  "nameLocation": "2649:13:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 131,
+                  "src": "2634:28:3",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 125,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2634:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2536:132:3"
+            },
+            "returnParameters": {
+              "id": 130,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 129,
+                  "mutability": "mutable",
+                  "name": "preCheckData",
+                  "nameLocation": "2700:12:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 131,
+                  "src": "2687:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 128,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2687:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2686:27:3"
+            },
+            "scope": 159,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 147,
+            "nodeType": "FunctionDefinition",
+            "src": "3213:212:3",
+            "nodes": [],
+            "documentation": {
+              "id": 132,
+              "nodeType": "StructuredDocumentation",
+              "src": "2720:488:3",
+              "text": " @notice A function that will be called by a safe before the execution of a transaction if the hooks are enabled and\n         transaction requies tool access.\n @dev Add custom logic in this function to validate the pre-state and contents of transaction for root access.\n @param safe A Safe instance\n @param rootAccess DataTypes.SafeRootAccess\n @param executionType uint256\n @param executionMeta bytes\n @return preCheckData bytes"
+            },
+            "functionSelector": "7359b742",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "preCheckRootAccess",
+            "nameLocation": "3222:18:3",
+            "parameters": {
+              "id": 143,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 135,
+                  "mutability": "mutable",
+                  "name": "safe",
+                  "nameLocation": "3256:4:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 147,
+                  "src": "3250:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISafe_$69",
+                    "typeString": "contract ISafe"
+                  },
+                  "typeName": {
+                    "id": 134,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 133,
+                      "name": "ISafe",
+                      "nameLocations": [
+                        "3250:5:3"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 69,
+                      "src": "3250:5:3"
+                    },
+                    "referencedDeclaration": 69,
+                    "src": "3250:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISafe_$69",
+                      "typeString": "contract ISafe"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 138,
+                  "mutability": "mutable",
+                  "name": "rootAccess",
+                  "nameLocation": "3294:10:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 147,
+                  "src": "3270:34:3",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SafeRootAccess_$37_calldata_ptr",
+                    "typeString": "struct SafeRootAccess"
+                  },
+                  "typeName": {
+                    "id": 137,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 136,
+                      "name": "SafeRootAccess",
+                      "nameLocations": [
+                        "3270:14:3"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 37,
+                      "src": "3270:14:3"
+                    },
+                    "referencedDeclaration": 37,
+                    "src": "3270:14:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SafeRootAccess_$37_storage_ptr",
+                      "typeString": "struct SafeRootAccess"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 140,
+                  "mutability": "mutable",
+                  "name": "executionType",
+                  "nameLocation": "3322:13:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 147,
+                  "src": "3314:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 139,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3314:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 142,
+                  "mutability": "mutable",
+                  "name": "executionMeta",
+                  "nameLocation": "3360:13:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 147,
+                  "src": "3345:28:3",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 141,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3345:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3240:139:3"
+            },
+            "returnParameters": {
+              "id": 146,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 145,
+                  "mutability": "mutable",
+                  "name": "preCheckData",
+                  "nameLocation": "3411:12:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 147,
+                  "src": "3398:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 144,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3398:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3397:27:3"
+            },
+            "scope": 159,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 158,
+            "nodeType": "FunctionDefinition",
+            "src": "3917:83:3",
+            "nodes": [],
+            "documentation": {
+              "id": 148,
+              "nodeType": "StructuredDocumentation",
+              "src": "3431:481:3",
+              "text": " @notice A function that will be called by a safe after the execution of a transaction if the hooks are enabled. Hooks should revert if the post state of after the transaction is not as expected.\n @dev Add custom logic in this function to validate the post-state after the transaction is executed.\n @param safe ISafe\n @param success bool\n @param preCheckData Arbitrary length bytes that was returned by during pre-check of the transaction."
+            },
+            "functionSelector": "f44d4ca3",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "postCheck",
+            "nameLocation": "3926:9:3",
+            "parameters": {
+              "id": 156,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 151,
+                  "mutability": "mutable",
+                  "name": "safe",
+                  "nameLocation": "3942:4:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 158,
+                  "src": "3936:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISafe_$69",
+                    "typeString": "contract ISafe"
+                  },
+                  "typeName": {
+                    "id": 150,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 149,
+                      "name": "ISafe",
+                      "nameLocations": [
+                        "3936:5:3"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 69,
+                      "src": "3936:5:3"
+                    },
+                    "referencedDeclaration": 69,
+                    "src": "3936:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISafe_$69",
+                      "typeString": "contract ISafe"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 153,
+                  "mutability": "mutable",
+                  "name": "success",
+                  "nameLocation": "3953:7:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 158,
+                  "src": "3948:12:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 152,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3948:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 155,
+                  "mutability": "mutable",
+                  "name": "preCheckData",
+                  "nameLocation": "3977:12:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 158,
+                  "src": "3962:27:3",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 154,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3962:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3935:55:3"
+            },
+            "returnParameters": {
+              "id": 157,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3999:0:3"
+            },
+            "scope": 159,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 114,
+              "name": "IERC165",
+              "nameLocations": [
+                "1994:7:3"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 11,
+              "src": "1994:7:3"
+            },
+            "id": 115,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1994:7:3"
+          }
+        ],
+        "canonicalName": "ISafeProtocolHooks",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 113,
+          "nodeType": "StructuredDocumentation",
+          "src": "1745:216:3",
+          "text": " @title ISafeProtocolHooks - An interface that a contract should implement to be enabled as hooks.\n @notice In Safe{Core} Protocol, hooks can approve or deny transactions based on the logic it implements."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          159,
+          11
+        ],
+        "name": "ISafeProtocolHooks",
+        "nameLocation": "1972:18:3",
+        "scope": 188,
+        "usedErrors": [],
+        "usedEvents": []
+      },
+      {
+        "id": 187,
+        "nodeType": "ContractDefinition",
+        "src": "4093:1066:3",
+        "nodes": [
+          {
+            "id": 166,
+            "nodeType": "FunctionDefinition",
+            "src": "4248:59:3",
+            "nodes": [],
+            "documentation": {
+              "id": 161,
+              "nodeType": "StructuredDocumentation",
+              "src": "4129:114:3",
+              "text": " @notice A funtion that returns name of the plugin\n @return name string name of the plugin"
+            },
+            "functionSelector": "06fdde03",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "name",
+            "nameLocation": "4257:4:3",
+            "parameters": {
+              "id": 162,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4261:2:3"
+            },
+            "returnParameters": {
+              "id": 165,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 164,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "4301:4:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 166,
+                  "src": "4287:18:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 163,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4287:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4286:20:3"
+            },
+            "scope": 187,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 172,
+            "nodeType": "FunctionDefinition",
+            "src": "4441:65:3",
+            "nodes": [],
+            "documentation": {
+              "id": 167,
+              "nodeType": "StructuredDocumentation",
+              "src": "4313:123:3",
+              "text": " @notice A funtion that returns version of the plugin\n @return version string version of the plugin"
+            },
+            "functionSelector": "54fd4d50",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "version",
+            "nameLocation": "4450:7:3",
+            "parameters": {
+              "id": 168,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4457:2:3"
+            },
+            "returnParameters": {
+              "id": 171,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 170,
+                  "mutability": "mutable",
+                  "name": "version",
+                  "nameLocation": "4497:7:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "4483:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 169,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4483:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4482:23:3"
+            },
+            "scope": 187,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 180,
+            "nodeType": "FunctionDefinition",
+            "src": "4790:96:3",
+            "nodes": [],
+            "documentation": {
+              "id": 173,
+              "nodeType": "StructuredDocumentation",
+              "src": "4512:273:3",
+              "text": " @notice A funtion that returns version of the plugin.\n         TODO: Define types of metadata provider and possible values of location in each of the cases.\n @return providerType uint256 Type of metadata provider\n @return location bytes"
+            },
+            "functionSelector": "d3d72d2a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "metadataProvider",
+            "nameLocation": "4799:16:3",
+            "parameters": {
+              "id": 174,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4815:2:3"
+            },
+            "returnParameters": {
+              "id": 179,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 176,
+                  "mutability": "mutable",
+                  "name": "providerType",
+                  "nameLocation": "4849:12:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 180,
+                  "src": "4841:20:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 175,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4841:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 178,
+                  "mutability": "mutable",
+                  "name": "location",
+                  "nameLocation": "4876:8:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 180,
+                  "src": "4863:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 177,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4863:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4840:45:3"
+            },
+            "scope": 187,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 186,
+            "nodeType": "FunctionDefinition",
+            "src": "5079:78:3",
+            "nodes": [],
+            "documentation": {
+              "id": 181,
+              "nodeType": "StructuredDocumentation",
+              "src": "4892:182:3",
+              "text": " @notice A function that indicates if the plugin requires root access to a Safe.\n @return requiresRootAccess True if root access is required, false otherwise."
+            },
+            "functionSelector": "be193d27",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "requiresRootAccess",
+            "nameLocation": "5088:18:3",
+            "parameters": {
+              "id": 182,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5106:2:3"
+            },
+            "returnParameters": {
+              "id": 185,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 184,
+                  "mutability": "mutable",
+                  "name": "requiresRootAccess",
+                  "nameLocation": "5137:18:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 186,
+                  "src": "5132:23:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 183,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5132:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5131:25:3"
+            },
+            "scope": 187,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISafeProtocolPlugin",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 160,
+          "nodeType": "StructuredDocumentation",
+          "src": "4004:88:3",
+          "text": " @title ISafeProtocolPlugin - An interface that a Safe plugin should implement"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          187
+        ],
+        "name": "ISafeProtocolPlugin",
+        "nameLocation": "4103:19:3",
+        "scope": 188,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "LGPL-3.0-only"
+  },
+  "id": 3
+}
