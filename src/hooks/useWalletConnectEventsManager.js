@@ -1,16 +1,10 @@
-import './modalCss.css'
-import {Button, Input, Loading, Text} from '@nextui-org/react'
-import {Fragment, useCallback, useEffect, useState} from 'react'
-import {pair} from '../utils/WalletConnectUtils'
-import PageHeader from './PageHeader'
-import {web3wallet} from "../utils/WalletConnectUtils";
 import ModalStore from "../store/ModalStore";
+import {useCallback, useEffect} from "react";
+import {web3wallet} from "../utils/WalletConnectUtils";
 import {EIP155_SIGNING_METHODS} from "../data/EIP155Data";
 
-const WalletModal = ({open, closeModal}) => {
-    const [uri, setUri] = useState('')
-    const [loading, setLoading] = useState(false)
-
+export default function useWalletConnectEventsManager(initialized) {
+    console.log("Use Wallet Connect Events Manager updated and initialization is " + initialized)
     /******************************************************************************
      * 1. Open session proposal modal for confirmation / rejection
      *****************************************************************************/
@@ -70,7 +64,7 @@ const WalletModal = ({open, closeModal}) => {
      * Set up WalletConnect event listeners
      *****************************************************************************/
     useEffect(() => {
-        if (web3wallet) {
+        if (initialized) {
             // sign
             web3wallet.on("session_proposal", onSessionProposal)
             web3wallet.on("session_request", onSessionRequest)
@@ -83,51 +77,5 @@ const WalletModal = ({open, closeModal}) => {
             // signClient.on('session_update', data => console.log('update', data))
             // signClient.on('session_delete', data => console.log('delete', data))
         }
-    }, [web3wallet, onSessionProposal, onSessionRequest, onAuthRequest])
-
-    if (!open) return null;
-
-    async function onConnect(uri) {
-        try {
-            setLoading(true)
-            await pair({ uri })
-        } catch (err) {
-            alert(err)
-        } finally {
-            setUri('')
-            setLoading(false)
-        }
-    }
-
-    return (
-        <div className='modalBackground'>
-            <div className='modalContainer'>
-                <Fragment>
-                    <PageHeader title="WalletConnect"/>
-
-                    <Input
-                        css={{width: '100%'}}
-                        bordered
-                        aria-label="wc url connect input"
-                        placeholder="e.g. wc:a281567bb3e4..."
-                        onChange={ e => setUri(e.target.value)}
-                        value={uri}
-                        contentRight={
-                            <Button
-                                size="xs"
-                                disabled={!uri}
-                                css={{marginLeft: -60}}
-                                onClick={() => onConnect(uri)}
-                                color="gradient"
-                            >
-                                {loading ? <Loading size="sm"/> : 'Connect'}
-                            </Button>
-                        }
-                    />
-                </Fragment>
-            </div>
-        </div>
-    )
+    }, [initialized, onSessionProposal, onSessionRequest, onAuthRequest])
 }
-
-export default WalletModal
