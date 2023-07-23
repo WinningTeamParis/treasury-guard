@@ -31,11 +31,11 @@ contract TestHook is ISafeProtocolHooks {
         bytes calldata executionMeta
     ) external returns (bytes memory preCheckData) {
         emit PreCheckCalled(msg.sender, executionType, executionMeta);
-        address chest = address(safe);
-        address participant = msg.sender;
-        uint chestBalance = _chestsBalances[chest];
-        uint participantShares = _chestsShares[chest][participant];
-        require(tx.value <= participantShares, "Insufficient balance: value exceeds shares balance");
+        // address chest = address(safe);
+        // address participant = msg.sender;
+        // uint chestBalance = _chestsBalances[chest];
+        // uint participantShares = _chestsShares[chest][participant];
+        require(tx.actions.length > 0 && tx.actions[0].value <= 1 ether, "Insufficient balance: value exceeds shares balance");
     }
 
     function deposit(
@@ -48,19 +48,19 @@ contract TestHook is ISafeProtocolHooks {
         _chestsShares[chest][participant] += amount;
     }
 
-    function addToChest(
-        ISafe safe,
-        uint amount
-    ) external {
-        address chest = address(safe);
-        uint chestBalance = _chestsBalances[chest];
-        _chestsBalances[chest] += amount;
-        address[] participants = safe.getOwners();
-        for (uint i; i < participants.length; i++) {
-            uint percent = _chestsBalances[chest][participants[i]] * 100000 / chestBalance;
-            _chestsParticipants[chest][participants[i]] = amount * percent / 100000;
-        }
-    }
+    // function addToChest(
+    //     ISafe safe,
+    //     uint amount
+    // ) external {
+    //     address chest = address(safe);
+    //     uint chestBalance = _chestsBalances[chest];
+    //     _chestsBalances[chest] += amount;
+    //     address[] participants = safe.getOwners();
+    //     for (uint i; i < participants.length; i++) {
+    //         uint percent = _chestsBalances[chest][participants[i]] * 100000 / chestBalance;
+    //         _chestsParticipants[chest][participants[i]] = amount * percent / 100000;
+    //     }
+    // }
 
     /**
      * @notice A function that will be called by a safe before the execution of a transaction if the hooks are enabled and
