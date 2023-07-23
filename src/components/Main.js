@@ -20,6 +20,8 @@ import Paper from '@mui/material/Paper';
 
 import { ReactComponent as Weth } from './weth.svg';
 import WalletModal from './WalletModal';
+import DepositModal from './DepositModal'
+import WithdrawModal from './WithdrawModal'
 
 
 function createData(no, address, id, funds, percentage) {
@@ -35,10 +37,24 @@ const rows = [
 export default function Main() {
 
   const [openModal, setOpenModal] = useState(false);
+  const [openDeposit, setDeposit] = useState(false);
+  const [openWithdraw, setWithdraw] = useState(false);
+
+  const handleDeposit = () => {
+    setDeposit(!openDeposit)
+  }
+
+  const handleWithdraw = () => {
+    setWithdraw(!openWithdraw)
+  }
 
   return (
     <div className='container' style={{overflowY:'scroll', height:'100vh', paddingBottom:'150px'}}>
       <WalletModal open={openModal} closeModal={setOpenModal}/>
+
+      <DepositModal open={openDeposit} closeModal={setDeposit}/>
+
+      <WithdrawModal open={openWithdraw} closeModal={setWithdraw}/>
 
       <div style={{marginTop: 30, position:'relative', display: 'flex'}}>
           <div style={{}}>
@@ -58,10 +74,10 @@ export default function Main() {
                   WalletConnect
               </button>
 
-              <button className="wconn" style={{borderRadius: '4px', cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', border: '1px solid var(--text-secondary, rgba(0, 26, 76, 0.60))'}}>
+              <button onClick={handleDeposit} className="wconn" style={{borderRadius: '4px', cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', border: '1px solid var(--text-secondary, rgba(0, 26, 76, 0.60))'}}>
                   Deposit
               </button>
-              <button className="wconn" style={{borderRadius: '4px', cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', border: '1px solid var(--text-secondary, rgba(0, 26, 76, 0.60))'}}>
+              <button onClick={handleWithdraw} className="wconn" style={{borderRadius: '4px', cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', border: '1px solid var(--text-secondary, rgba(0, 26, 76, 0.60))'}}>
                   Withdraw
               </button>
             </div>
