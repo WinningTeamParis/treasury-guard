@@ -34,13 +34,14 @@ const safeApiKit = new SafeApiKit({
     ethAdapter: ethAdapterOwner1
 })
 
-async function create_account() {
+async function create_account(
+  participants
+) {
     const safeFactory = await SafeFactory.create({ ethAdapter: ethAdapterOwner1 });
+    participants.push(await owner1Signer.getAddress())
 
     const safeAccountConfig: SafeAccountConfig = {
-        owners: [
-          await owner1Signer.getAddress()
-        ],
+        owners: participants,
         threshold: 1,
         // ... (Optional params)
       }
