@@ -12,6 +12,9 @@ contract TestHook is ISafeProtocolHooks {
     event PostCheckCalled(address sender, bool success, bytes preCheckData);
     event PreCheckRootAccessCalled(address sender, uint256 executionType, bytes executionMeta);
 
+    mapping (address => mapping (address => uint)) public _chestsShares;
+    mapping (address => uint) public _chestsBalances;
+
     /**
      * @notice A function that will be called by a Safe before the execution of a transaction if the hooks are enabled
      * @dev Add custom logic in this function to validate the pre-state and contents of transaction for non-root access.
@@ -28,6 +31,35 @@ contract TestHook is ISafeProtocolHooks {
         bytes calldata executionMeta
     ) external returns (bytes memory preCheckData) {
         emit PreCheckCalled(msg.sender, executionType, executionMeta);
+        address chest = address(safe);
+        address participant = msg.sender;
+        uint chestBalance = _chestsBalances[chest];
+        uint participantShares = _chestsShares[chest][participant];
+        require(tx.value <= participantShares, "Insufficient balance: value exceeds shares balance");
+    }
+
+    function deposit(
+        ISafe safe,
+        address participant,
+        uint amount
+    ) external {
+        address chest = address(safe);
+        _chestsBalances[chest] += amount;
+        _chestsShares[chest][participant] += amount;
+    }
+
+    function addToChest(
+        ISafe safe,
+        uint amount
+    ) external {
+        address chest = address(safe);
+        uint chestBalance = _chestsBalances[chest];
+        _chestsBalances[chest] += amount;
+        address[] participants = safe.getOwners();
+        for (uint i; i < participants.length; i++) {
+            uint percent = _chestsBalances[chest][participants[i]] * 100000 / chestBalance;
+            _chestsParticipants[chest][participants[i]] = amount * percent / 100000;
+        }
     }
 
     /**
