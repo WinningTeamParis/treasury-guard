@@ -82,8 +82,8 @@ export default function Graph() {
         labelStyle={{
           dominantBaseline: 'text-after-edge',
           fill: '#000',
-          fontFamily: 'sans-serif',
-          fontSize: 10,
+          fontFamily: 'Rubik', 
+          fontSize: 6,
           fontWeight: 'normal',
           textAnchor: 'middle'
         }}

@@ -147,7 +147,7 @@ export default function Main() {
               </div>
             </button>
 
-            <button style={{width:'100%', textAlign:'left', height:'40%', alignItems:'center'}}>
+            {/* <button style={{width:'100%', textAlign:'left', height:'40%', alignItems:'center'}}>
               <div>
                 <div style={{display:'flex', alignItems:'center', gap: 5,  height: '10px'}}>
                   <Weth/>
@@ -163,7 +163,7 @@ export default function Main() {
                   <h2 className='text-sm mt-5' style={{position:'absolute', right:20, color:'#76808F'}}>$152,000</h2>
                 </div>
               </div>
-            </button>
+            </button> */}
           </div>
         </div>
 
