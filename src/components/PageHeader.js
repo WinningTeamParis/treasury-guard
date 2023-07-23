@@ -8,7 +8,7 @@ export default function PageHeader({ title, children }) {
     return (
         <Fragment>
             <Row
-                css={{ marginBottom: "$5", width: "100%" }}
+                css={{ marginBottom: "$5", width: "50%" }}
                 justify="space-between"
                 align="center"
             >

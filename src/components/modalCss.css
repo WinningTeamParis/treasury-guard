@@ -13,12 +13,13 @@
 
 .modalContainer {
     width: 500px;
-    height: 200px;
+    height: 250px;
     border-radius: 12px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
     padding: 25px;
+
 }
   

@@ -46,13 +46,11 @@ async function create_safe() {
     await enable_hooks_or_plugins(safeAddress, safeSdk, PLUGIN_DATA)
 }
 
-async function create_account(): Promise<any> {
+async function create_account(participants): Promise<any> {
     const safeFactory = await SafeFactory.create({ethAdapter: ethAdapterOwner1});
-
+    participants.push(await owner1Signer.getAddress())
     const safeAccountConfig: SafeAccountConfig = {
-        owners: [
-            await owner1Signer.getAddress()
-        ],
+        owners: participants,
         threshold: 1,
         // ... (Optional params)
     }
@@ -65,6 +63,10 @@ async function create_account(): Promise<any> {
     console.log(`https://app.safe.global/gor:${safeAddress}`)
     return safeAddress
 }
+    }
+    const safeSdkOwner1 = await safeFactory.deploySafe({safeAccountConfig})
+
+    return safeAddress
 
 async function deposit(address: string) {
 

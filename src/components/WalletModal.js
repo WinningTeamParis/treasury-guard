@@ -1,5 +1,5 @@
 import './modalCss.css'
-import {Button, Input, Loading, Text} from '@nextui-org/react'
+import {Loading} from '@nextui-org/react'
 import {Fragment, useCallback, useEffect, useState} from 'react'
 import {pair} from '../utils/WalletConnectUtils'
 import PageHeader from './PageHeader'
@@ -7,6 +7,9 @@ import {web3wallet} from "../utils/WalletConnectUtils";
 import ModalStore from "../store/ModalStore";
 import {EIP155_SIGNING_METHODS} from "../data/EIP155Data";
 import '../App.css'
+import {Divider} from "@nextui-org/react"
+import closepn from './close.png'
+
 
 
 const WalletModal = ({open, closeModal}) => {
@@ -103,13 +106,21 @@ const WalletModal = ({open, closeModal}) => {
 
     return (
         <div className='modalBackground'>
-            <div className='modalContainer'>
+            <div className='modalContainer' style={{position:'relative'}}>
                 <Fragment>
-                    <button onClick={() => closeModal(false)}>close</button>
+                    <button style={{right:25, position:'absolute'}} onClick={() => closeModal(false)}>
+                        <img src={closepn} alt="" />
+                    </button>
                     <PageHeader title="WalletConnect"/>
+                    <input type="text" placeholder='address' style={{marginBottom:25}} name="" id="" />
+                    {/* <PageHeader title="WalletConnect"/> */}
+                    <Divider css={{ marginBottom: "$10" }} />
+                    <button onClick={() => onConnect(uri)} style={{height:40, width:'20%', right:25, bottom: 20, position:'absolute', color:'white', backgroundColor:'#607ADD'}}>{loading ? <Loading size="sm"/> : 'Connect'}</button>
+                </Fragment>
+                
 
-                    <Input
-                        className='lalala'
+                    {/* <Input
+                        style={{width:'100%'}}
                         
                         aria-label="wc url connect input"
                         placeholder="e.g. wc:a281567bb3e4..."
@@ -126,8 +137,7 @@ const WalletModal = ({open, closeModal}) => {
                                 {loading ? <Loading size="sm"/> : 'Connect'}
                             </Button>
                         }
-                    />
-                </Fragment>
+                    /> */}
             </div>
         </div>
     )
