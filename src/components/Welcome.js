@@ -82,7 +82,7 @@ export default function Welcome() {
               width: '340px',
               justifyContent: 'center',
               alignItems: 'center',
-              marginTop: 10, height:'50px'}} onClick={handleConnect}>
+              marginTop: 10, height:'50px'}}>
               <img src={metamask} alt="" />
               Connect with Metamask
               </button>            
