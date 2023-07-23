@@ -18,7 +18,8 @@ const updateWallet = async (accounts:any) => {
 
 const metamaskEnabled = typeof window.ethereum !== "undefined";
 
-const handleConnect = async () => {                
+const handleConnect = async () => {           
+    console.log("handle connect");     
     let accounts = await window.ethereum.request({   
       method: "eth_requestAccounts",                 
     })                                               
@@ -76,7 +77,7 @@ export default function Welcome() {
             <h1 className='text-sm mb-10' style={{color:'#607ADD'}}>
               External Wallet
             </h1>
-            <button onClick={{handleConnect}} style={{ backgroundColor:'#E6E8ED', padding:'11px 24px', 
+            <button onClick={handleConnect} style={{ backgroundColor:'#E6E8ED', padding:'11px 24px', 
               display: 'flex',
               gap: 6,
               width: '340px',
