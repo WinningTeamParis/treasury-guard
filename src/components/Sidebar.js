@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
-    <div style={{ width: '10%', minWidth: '200px', height: '100%', padding: '20px 16px',borderRight: '1px solid var(--black-10, rgba(28, 28, 28, 0.10))'}}>
+    <div style={{ width: '1%', minWidth: '200px', height: '100%', padding: '20px 16px',borderRight: '1px solid var(--black-10, rgba(28, 28, 28, 0.10))'}}>
         <div style={{display: 'flex'}}>
             <img style={{height: 30, width: 30, borderRadius: '50%', backgroundColor: '#808CA5'}} src="https://s3-alpha-sig.figma.com/img/0da2/7f3d/6f1edb587f362eb0c667d594b041111a?Expires=1690761600&Signature=KQAldEoEYj6MIHI~ZJTnlGQaBrgYT0rb1pHnC94c6q9UQBkIPfRMEnpR0BNuU5HXs5yPk99gXyOozykdazo~8GQjcdA27rQkyDDO~vWl6QRiifh65~Y6l5cCR9kHHa8J2ym7e8C41JyFEKmxZfbuvmIS8Cb2iV1XzBe54uZMoygDnXCSqh1w5dN532iOeodOZvugHGMiYr8GCbniYK2fN4ya3BRqhin7bvasVIjeLQ76MTKlFkm3Qif3Vb5m3BoALzuyl218zdQV6vnsVv-zh-YMCmj~ks3jdsSpFeS3K7XUEerwz~WhyebJEBXSTkx6JtdEevc5pMVlaFyGvCKPSw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
             <div style={{marginLeft: 10}}>
