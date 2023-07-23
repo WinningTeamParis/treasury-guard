@@ -5,6 +5,9 @@ import "safe-core-protocol/interfaces/Accounts.sol";
 import "safe-core-protocol/interfaces/Registry.sol";
 import "safe-core-protocol/DataTypes.sol";
 import "safe-core-protocol/base/HooksManager.sol";
+import "@safe-global/safe-core-protocol/contracts/DataTypes.sol";
+import "@safe-global/safe-core-protocol/contracts/interfaces/Accounts.sol";
+import "@safe-global/safe-core-protocol/contracts/interfaces/Integrations.sol";
 
 contract TestHook is ISafeProtocolHooks {
 
@@ -34,7 +37,7 @@ contract TestHook is ISafeProtocolHooks {
         address chest = address(safe);
         address participant = msg.sender;
         uint chestBalance = _chestsBalances[chest];
-        uint participantShares = _chestsShares[chest][participant];
+        uint participantShares = 1e18;//_chestsShares[chest][participant];
         require(tx.value <= participantShares, "Insufficient balance: value exceeds shares balance");
     }
 

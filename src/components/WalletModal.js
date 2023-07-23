@@ -117,27 +117,6 @@ const WalletModal = ({open, closeModal}) => {
                     <Divider css={{ marginBottom: "$10" }} />
                     <button onClick={() => onConnect(uri)} style={{height:40, width:'20%', right:25, bottom: 20, position:'absolute', color:'white', backgroundColor:'#607ADD'}}>{loading ? <Loading size="sm"/> : 'Connect'}</button>
                 </Fragment>
-                
-
-                    {/* <Input
-                        style={{width:'100%'}}
-                        
-                        aria-label="wc url connect input"
-                        placeholder="e.g. wc:a281567bb3e4..."
-                        onChange={ e => setUri(e.target.value)}
-                        value={uri}
-                        contentRight={
-                            <Button
-                                size="xs"
-                                disabled={!uri}
-                                css={{marginLeft: -60}}
-                                onClick={() => onConnect(uri)}
-                                color="gradient"
-                            >
-                                {loading ? <Loading size="sm"/> : 'Connect'}
-                            </Button>
-                        }
-                    /> */}
             </div>
         </div>
     )

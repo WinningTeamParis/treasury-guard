@@ -11,8 +11,8 @@ import SafeApiKit from '@safe-global/api-kit'
 // https://chainlist.org/?search=goerli&testnets=true
 const RPC_URL = 'https://eth-goerli.public.blastapi.io'
 const MANAGER_ADDRESS = "0xAbd9769A78Ee63632A4fb603D85F63b8D3596DF9"
-const HOOKS_DATA = "0xfb63daa10000000000000000000000008599267fe1c8508f5c3b51858c89f09ac1658f87" // will change in the future
-const PLUGIN_DATA = "0x250db3c0000000000000000000000000719954b1689bd0afdec6e07a6e605d60938f79d30000000000000000000000000000000000000000000000000000000000000000" // will change in the future
+const HOOKS_DATA = "0xfb63daa10000000000000000000000005ed179a6ea66c180a8dfa42e0775d402c0d3b587" // will change in the future
+const PLUGIN_DATA = "0x250db3c0000000000000000000000000d450713f617058bddd0828d7afe5c7b64df6003c0000000000000000000000000000000000000000000000000000000000000000" // will change in the future
 
 class LoggingProvider extends ethers.providers.JsonRpcProvider {
     async send(method: string, params: any): Promise<any> {
@@ -38,7 +38,8 @@ const safeApiKit = new SafeApiKit({
 })
 
 async function create_safe() {
-    const safeAddress = await create_account()
+    // const safeAddress = await create_account()
+    const safeAddress = "0xe41dC73F3999E0279da02817Cc6cF5868f9Dc329"
     await deposit(safeAddress)
     const safeSdk = await Safe.create({ethAdapter: ethAdapterOwner1, safeAddress: safeAddress})
     await enable_module(safeAddress, safeSdk)
@@ -46,11 +47,10 @@ async function create_safe() {
     await enable_hooks_or_plugins(safeAddress, safeSdk, PLUGIN_DATA)
 }
 
-async function create_account(participants): Promise<any> {
+async function create_account(): Promise<any> {
     const safeFactory = await SafeFactory.create({ethAdapter: ethAdapterOwner1});
-    participants.push(await owner1Signer.getAddress())
     const safeAccountConfig: SafeAccountConfig = {
-        owners: participants,
+        owners: [await owner1Signer.getAddress()],
         threshold: 1,
         // ... (Optional params)
     }
@@ -63,14 +63,10 @@ async function create_account(participants): Promise<any> {
     console.log(`https://app.safe.global/gor:${safeAddress}`)
     return safeAddress
 }
-    }
-    const safeSdkOwner1 = await safeFactory.deploySafe({safeAccountConfig})
-
-    return safeAddress
 
 async function deposit(address: string) {
 
-    const safeAmount = ethers.utils.parseUnits('0.05', 'ether').toHexString()
+    const safeAmount = ethers.utils.parseUnits('1', 'ether').toHexString()
 
     const transactionParameters = {
         to: address,
@@ -128,7 +124,7 @@ async function enable_hooks_or_plugins(address: string, safeSdk: Safe, encodedDa
     const executeTxResponse = await safeSdk.executeTransaction(safeTransaction)
     const receipt = await executeTxResponse.transactionResponse?.wait()
 
-    console.log("Hooks or plugins enabled:")
+    console.log('Transaction executed:')
     if (receipt) {
         console.log(`https://goerli.etherscan.io/tx/${receipt.transactionHash}`)
     }
@@ -159,15 +155,10 @@ async function transaction_from_plugin() {
         provider
     );
 
-    const amount = ethers.utils.parseUnits('0.001', 'ether').toString()
-    const safeTransactionData = ethers.utils.defaultAbiCoder.encode(
-        ['address', 'bytes', 'uint256'],
-        ["0x25238221BE3C80b7dDCD22CCB2Ff32cff32ecF91", '0x', amount]
-    );
+    const amount = ethers.utils.parseUnits('0.1', 'ether').toNumber;
 
     console.log(manager.address);
-    console.log(safeTransactionData);
-    await plugin.executeFromPlugin(manager.address, "0x2DB14E367FbB4EB6B733709756d12De9b0B39B59", safeTransactionData);
+    await plugin.executeFromPlugin(manager.address, "0x2DB14E367FbB4EB6B733709756d12De9b0B39B59", amount);
 }
 
-create_safe();
+transaction_from_plugin();
