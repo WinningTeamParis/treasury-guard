@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from '../svg/LogoSVG'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import logoPNG from './Group3.png'
 
 import twitter from './Logo_of_Twitter.png'
@@ -10,24 +10,28 @@ import walletcon from './WalletConnect.svg'
 
 function setWallet(accounts: any) {
   console.log(accounts);
+
 }
 
-const updateWallet = async (accounts:any) => {     
-    setWallet({ accounts })                         
-}   
 
-const metamaskEnabled = typeof window.ethereum !== "undefined";
-
-const handleConnect = async () => {           
-    console.log("handle connect");     
-    let accounts = await window.ethereum.request({   
-      method: "eth_requestAccounts",                 
-    })                                               
-    updateWallet(accounts)                           
-}  
 
 
 export default function Welcome() {
+  const navigate = useNavigate();
+  const updateWallet = async (accounts:any) => {     
+      setWallet({ accounts })   
+      navigate('home')                      
+  }   
+
+  const metamaskEnabled = typeof window.ethereum !== "undefined";
+
+  const handleConnect = async () => {           
+      console.log("handle connect");     
+      let accounts = await window.ethereum.request({   
+        method: "eth_requestAccounts",                 
+      })                                               
+      updateWallet(accounts)                           
+  }  
   return (
     <div style={{width: '100%', textAlign: 'center'}}>
         <Link to="/home">
@@ -45,7 +49,7 @@ export default function Welcome() {
           <div style={{textAlign:'left'}}>
             <h1 className='text-xs'>Email</h1>
             <input style={{width:'100%'}} type="text" name="" id="" />
-            <Link to="/home">
+            <Link to="/join">
               <button style={{width:'100%', color:'white', backgroundColor:'#607ADD', marginTop: 10, height:'50px'}}>Connect with email</button>
             </Link>
             <button style={{ backgroundColor:'#E6E8ED', padding:'11px 24px', 

@@ -71,27 +71,27 @@ export default function Main() {
       <div style={{display:'flex',marginTop: 20, gap: 20}}>
         <div style={{backgroundColor:'#F7F9FB', width:'50%', borderRadius: 5, padding:12, position:'relative'}}>
           <div style={{display:'flex', width:'100%', padding:12, alignItems:'center'}}>
-            <h3 className='text-lg font-bold'>Price Chart</h3>
+            <h3 className='text-lg font-bold'>Weekly Team Balance Chart</h3>
             <div style={{display:'flex', right: 20, position:'absolute'}}>
-              <button style={{borderTopLeftRadius: '4px', borderBottomLeftRadius: '4px', borderRight: 'none',cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', border: '1px solid var(--text-secondary, rgba(0, 26, 76, 0.60))', color: 'white', backgroundColor:'blue'}}>
+              {/* <button style={{borderTopLeftRadius: '4px', borderBottomLeftRadius: '4px', borderRight: 'none',cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', border: '1px solid var(--text-secondary, rgba(0, 26, 76, 0.60))', color: 'white', backgroundColor:'blue'}}>
                   Team Balance
               </button>
               <button style={{borderTopRightRadius: '4px', borderBottomRightRadius: '4px', cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', border: '1px solid var(--text-secondary, rgba(0, 26, 76, 0.60))', backgroundColor:'transparent'}}>
                   Your Share
-              </button>
+              </button> */}
             </div>
           </div>
 
           <div style={{display:'flex', borderBottom: '1px solid gray'}}>
-            <button style={{borderBottom: '2px solid black', borderLeft:'none',borderTop:'none',borderRight:'none',cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', backgroundColor:'transparent'}}>
+            {/* <button style={{borderBottom: '2px solid black', borderLeft:'none',borderTop:'none',borderRight:'none',cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', backgroundColor:'transparent'}}>
                 Weekly
-            </button>
-            <button style={{borderBottom: 'none', borderLeft:'none',borderTop:'none',borderRight:'none',cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', backgroundColor:'transparent'}}>
+            </button> */}
+            {/* <button style={{borderBottom: 'none', borderLeft:'none',borderTop:'none',borderRight:'none',cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', backgroundColor:'transparent'}}>
                 Monthly
             </button>
             <button style={{borderBottom: 'none', borderLeft:'none',borderTop:'none',borderRight:'none',cursor:'pointer', display: 'flex', gap:5, padding: '8px 16px', justifyContent: 'center', alignItems: 'center', backgroundColor:'transparent'}}>
                 3 Months
-            </button>
+            </button> */}
           </div>
 
           <Graph/>
@@ -116,8 +116,8 @@ export default function Main() {
                   <Weth/>
                   <h5 style={{margin:0}}>wETH</h5>
                   <h5 style={{color:'gray', margin:0, fontSize: '12px'}}>Wrapped ETH</h5>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 ml-5" style={{width:'40%'}}>
-                    <div className="bg-blue-600 h-2.5 rounded-full" style={{width: '70%'}}></div>
+                  <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 ml-5" style={{width:'40%', right:90, position:'absolute'}}>
+                    <div className=" h-2.5 rounded-full" style={{width: '70%', backgroundColor:'#ec1c79'}}></div>
                   </div>
                   <h3 style={{right:20,margin:0, position:'absolute'}}>70%</h3>
                 </div>
@@ -128,17 +128,17 @@ export default function Main() {
               </div>
             </button>
 
-            <button style={{width:'100%', textAlign:'left', height:'40%', alignItems:'center', borderBottom: '1px solid grey'}}>
+            <button style={{width:'100%', textAlign:'left', paddingTop: 20,height:'50%', alignItems:'center', borderBottom: '1px solid grey'}}>
               <div>
                 <div style={{display:'flex', alignItems:'center', gap: 5,  height: '10px'}}>
                   {/* <Weth/> */}
                   <img src={ethLogo} alt="" />
                   <h5 style={{margin:0}}>ETH</h5>
                   <h5 style={{color:'gray',margin:0, fontSize: '12px'}}>Ethereum</h5>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 ml-5" style={{width:'40%'}}>
-                    <div className="bg-blue-600 h-2.5 rounded-full" style={{width: '70%'}}></div>
+                  <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 ml-5" style={{width:'40%', right:90, position:'absolute'}}>
+                    <div className="bg-blue-600 h-2.5 rounded-full" style={{width: '30%'}}></div>
                   </div>
-                  <h3 style={{right:20, margin:0, position:'absolute'}}>70%</h3>
+                  <h3 style={{right:20, margin:0, position:'absolute'}}>30%</h3>
                 </div>
                 <div style={{display:'flex', alignItems:'center', width:'100%'}}>
                   <h2 className='font-bold text-sm mt-5'>51.11100  ETH</h2>

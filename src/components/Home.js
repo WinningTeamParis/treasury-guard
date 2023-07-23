@@ -20,7 +20,7 @@ export default function Home() {
             <div style={{display: 'flex', height: '100vh', overflow: 'hidden'}}>
                 <Sidebar/>
                 <Navbar/>
-                {/*<Activity/>*/}
+                <Activity/>
             </div>
 
             <Modal />
